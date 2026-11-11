@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesibilidad — Asociación LSGE</title>
+  <meta name="description" content="Declaración de accesibilidad del sitio de la Asociación LSGE: medidas para personas ciegas, con baja visión, sordas y sordociegas, nivel WCAG 2.2 AA, panel de accesibilidad avanzada y contacto para reportar barreras.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Asociación LSGE">
+  <link rel="canonical" href="https://info-lsge.github.io/web/accesibilidad/">
+  <link rel="llms" type="text/plain" href="https://info-lsge.github.io/web/llms.txt">
+  <meta name="geo.region" content="GQ">
+  <meta name="geo.placename" content="Malabo, Bata, Mongomo">
+  <meta name="geo.position" content="3.7523;8.7742">
+  <meta name="ICBM" content="3.7523, 8.7742">
+  <meta property="og:site_name" content="LSGE — Lengua de Signos de Guinea Ecuatorial">
+  <meta property="og:title" content="Accesibilidad — Asociación LSGE">
+  <meta property="og:description" content="Cómo hacemos accesible el sitio de la LSGE para personas ciegas, con baja visión, sordas y sordociegas.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://info-lsge.github.io/web/accesibilidad/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://info-lsge.github.io/web/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Accesibilidad — Asociación LSGE">
+  <meta name="twitter:image" content="https://info-lsge.github.io/web/img/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Accesibilidad — Asociación LSGE",
+    "url": "https://info-lsge.github.io/web/accesibilidad/",
+    "inLanguage": "es",
+    "about": { "@type": "Thing", "name": "Accesibilidad web" },
+    "isPartOf": { "@type": "WebSite", "name": "Asociación LSGE", "url": "https://info-lsge.github.io/web/" },
+    "publisher": {
+      "@type": "NGO",
+      "name": "Asociación LSGE — Lengua de Signos de Guinea Ecuatorial",
+      "url": "https://info-lsge.github.io/web/",
+      "logo": "https://info-lsge.github.io/web/img/logo-oficial.png"
+    }
+  }
+  </script>
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="../img/logo-oficial.png">
+  <link rel="apple-touch-icon" href="../img/logo-oficial.png">
+  <meta name="theme-color" content="#0f1e3a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..600,0..1,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/subpage.css">
+  <style>
+    .doc{max-width:820px;margin:0 auto;padding:48px 24px 72px}
+    .doc h1{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:900;letter-spacing:-.02em;color:var(--text);margin-bottom:10px;line-height:1.15}
+    .doc .lead{font-size:1.05rem;color:var(--text-secondary);line-height:1.75;margin-bottom:32px}
+    .doc h2{font-size:1.3rem;font-weight:800;color:var(--text);margin:38px 0 12px;padding-top:12px;border-top:1px solid var(--border)}
+    .doc h3{font-size:1.02rem;font-weight:700;color:var(--text);margin:22px 0 8px}
+    .doc p,.doc li{color:var(--text-secondary);line-height:1.8}
+    .doc ul{padding-left:22px;margin:10px 0 0}
+    .doc li{margin-bottom:8px}
+    .doc li::marker{color:var(--gold)}
+    .doc strong{color:var(--text)}
+    .doc a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+    .doc kbd{display:inline-block;padding:2px 7px;border:1px solid var(--border);border-bottom-width:2px;border-radius:6px;background:var(--bg-alt);color:var(--text);font-family:inherit;font-size:.82em;font-weight:700}
+    .doc .badge{display:inline-block;background:var(--bg-alt);border:1px solid var(--border);color:var(--text);border-radius:100px;padding:4px 12px;font-size:.75rem;font-weight:700;margin:0 6px 6px 0}
+    .doc .callout{background:var(--bg-alt);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 20px;margin:20px 0}
+    .doc .callout p{margin:0}
+  </style>
+</head>
+<body class="subpage" id="app">
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><span class="material-symbols-outlined" aria-hidden="true" style="font-size:1em;vertical-align:-3px">accessibility_new</span> Accesibilidad del sitio LSGE</span>
+      <div class="topbar__tools">
+        <div id="a11yMount"></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../" class="site-header__logo" aria-label="Asociación LSGE — inicio">
+        <img src="../img/logo-oficial.svg" alt="" style="height:42px;width:auto;margin-right:12px" onerror="this.src='../img/logo-oficial.png'">
+        <div><strong>Asociación LSGE</strong><small>Accesibilidad</small></div>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="../">Inicio</a>
+        <a href="../linguistica/">Gramática</a>
+        <a href="../diccionario/">Diccionario</a>
+        <a href="../accesibilidad/" class="active" aria-current="page">Accesibilidad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="doc">
+      <h1>Declaración de accesibilidad</h1>
+      <p class="lead">
+        La Asociación LSGE trabaja para que este sitio pueda usarlo cualquier persona:
+        con ceguera, con baja visión, sorda, sordociega, con dificultades de lectura o
+        sin ellas. La accesibilidad no es un extra: es parte del proyecto.
+      </p>
+
+      <p>
+        <span class="badge">WCAG 2.2 nivel AA</span>
+        <span class="badge">HTML semántico</span>
+        <span class="badge">Sin dependencias</span>
+        <span class="badge">Funciona sin conexión</span>
+      </p>
+
+      <h2>Panel de accesibilidad avanzada</h2>
+      <p>
+        En la barra superior, junto a los idiomas, está el botón
+        <strong>Accesibilidad</strong> (icono de persona con los brazos abiertos).
+        También se abre con el atajo <kbd>Alt</kbd> + <kbd>A</kbd>.
+      </p>
+      <ul>
+        <li><strong>Tamaño del texto</strong> del 100 % al 200 %, sin romper el diseño.</li>
+        <li><strong>Alto contraste</strong>: negro puro sobre blanco puro y amarillo para los enlaces, sin degradados ni sombras.</li>
+        <li><strong>Invertir colores</strong> para quien lee mejor en negativo.</li>
+        <li><strong>Más espaciado</strong> entre letras, palabras y líneas, útil con dislexia y baja visión.</li>
+        <li><strong>Subrayar todos los enlaces</strong>, para no depender solo del color.</li>
+        <li><strong>Cursor grande</strong> de alto contraste.</li>
+        <li><strong>Guía de lectura</strong>: una banda horizontal sigue al puntero para no perder el renglón.</li>
+        <li><strong>Lectura por voz</strong>: lee el contenido principal con la voz del navegador. Botón <em>Leer la página</em> y <em>Detener</em>.</li>
+        <li><strong>Colores personalizados</strong> de fondo y texto.</li>
+      </ul>
+      <p>
+        Todos los ajustes se guardan en el navegador y se mantienen al cambiar de página.
+        El botón <em>Restablecer todo</em> vuelve a la configuración original.
+      </p>
+
+      <h2>Navegación con teclado</h2>
+      <ul>
+        <li><kbd>Tab</kbd> recorre los elementos interactivos; <kbd>Mayús</kbd> + <kbd>Tab</kbd> va hacia atrás.</li>
+        <li><kbd>Intro</kbd> o <kbd>Espacio</kbd> activan botones y abren la ficha de un signo.</li>
+        <li><kbd>Esc</kbd> cierra el panel de accesibilidad, el menú móvil, las sugerencias del buscador y las ventanas de diálogo.</li>
+        <li>En las pestañas de la comunidad, las flechas <kbd>←</kbd> <kbd>→</kbd> cambian de pestaña, y <kbd>Inicio</kbd> / <kbd>Fin</kbd> van a la primera o a la última.</li>
+        <li>En el buscador del diccionario, las flechas <kbd>↑</kbd> <kbd>↓</kbd> recorren las sugerencias y <kbd>Intro</kbd> abre la ficha.</li>
+        <li>El foco siempre es visible: un contorno dorado de 2 píxeles.</li>
+        <li>Todas las páginas empiezan con un enlace <em>Saltar al contenido principal</em>.</li>
+      </ul>
+
+      <h2>Para lectores de pantalla</h2>
+      <ul>
+        <li>Estructura con <strong>encabezados jerárquicos</strong>, regiones <code>main</code>, <code>nav</code>, <code>header</code> y <code>footer</code>, y nombres accesibles en cada navegación.</li>
+        <li><strong>Regiones vivas</strong> que anuncian los resultados del buscador, el cambio de idioma y el estado de los ajustes.</li>
+        <li>El idioma del documento se declara con códigos válidos: <code>es</code>, <code>fr</code>, <code>fan</code> (fang) y <code>buw</code> (bubi), para que la voz de síntesis pronuncie correctamente.</li>
+        <li>Los iconos decorativos están ocultos con <code>aria-hidden</code>; los informativos llevan texto alternativo.</li>
+        <li>Las fichas de los signos son diálogos con foco atrapado: no se puede salir del diálogo sin cerrarlo.</li>
+        <li>Los datos de cada signo (configuración, localización, movimiento, orientación y componentes no manuales) se ofrecen como texto, no solo como vídeo.</li>
+      </ul>
+
+      <h2>Para personas sordas y sordociegas</h2>
+      <ul>
+        <li>El contenido principal está en <strong>lengua escrita clara</strong>, con frases cortas.</li>
+        <li>El sitio se ofrece en <strong>español, francés, fang y bubi</strong>.</li>
+        <li>Los vídeos de signos son <strong>sin audio</strong>: la información no depende del sonido.</li>
+        <li>Cuando se publique el vídeo institucional, irá <strong>en lengua de signos</strong> y con texto.</li>
+      </ul>
+
+      <h2>Pautas y nivel de conformidad</h2>
+      <p>
+        El sitio se ha revisado siguiendo las <strong>Pautas de Accesibilidad para el
+        Contenido Web (WCAG) 2.2</strong>, con el objetivo de alcanzar el
+        <strong>nivel AA</strong>. Se cumplen los cuatro principios: perceptible,
+        operable, comprensible y robusto.
+      </p>
+      <p>
+        Se respetan las preferencias del sistema: <code>prefers-reduced-motion</code>
+        desactiva animaciones y desplazamiento suave, y <code>prefers-contrast: more</code>
+        refuerza bordes y textos.
+      </p>
+
+      <h2>Limitaciones conocidas</h2>
+      <div class="callout">
+        <p>
+          Preferimos decirlas antes que esconderlas. Estamos trabajando en ellas y
+          agradecemos que nos las recuerden.
+        </p>
+      </div>
+      <ul>
+        <li><strong>Vídeos de signos:</strong> la carpeta de vídeos aún está vacía; las fichas muestran un pictograma en su lugar. La información textual sigue disponible.</li>
+        <li><strong>Documentos de la gramática:</strong> algunos enlaces internos del portal de lingüística apuntan a contenidos todavía no publicados y se anuncian como no disponibles.</li>
+        <li><strong>Tipografía:</strong> se cargan las fuentes Inter y Material Symbols desde Google Fonts. Sin conexión se usan las fuentes del sistema y los iconos pueden no mostrarse; el texto sigue siendo legible.</li>
+        <li><strong>Idiomas:</strong> las traducciones a fang y bubi cubren los textos principales, no todo el contenido largo.</li>
+        <li><strong>Formularios:</strong> el formulario de contacto de la portada es una demostración y no envía correo; el contacto real es el correo electrónico.</li>
+      </ul>
+
+      <h2>Contacto y reclamaciones</h2>
+      <p>
+        Si encuentras una barrera de accesibilidad, escríbenos a
+        <a href="mailto:lsge.eg@gmail.com">lsge.eg@gmail.com</a> indicando la página y
+        qué te ha impedido usarla. Según la norma del proyecto, toda consulta o
+        sugerencia se responde por escrito de forma razonada y definitiva en un plazo
+        aproximado de <strong>30 días</strong>.
+      </p>
+
+      <p style="margin-top:32px;font-size:.85rem;color:var(--text-muted)">
+        Última revisión: 11 de noviembre de 2026 · Asociación LSGE, Malabo (Guinea Ecuatorial).
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h4>Asociación LSGE</h4>
+          <p style="font-size:.85rem;color:var(--footer-muted);line-height:1.7">Lengua de Signos de Guinea Ecuatorial. Malabo · Bata · Mongomo.</p>
+        </div>
+        <div>
+          <h4>Navegar</h4>
+          <a href="../">Inicio</a>
+          <a href="../linguistica/">Gramática</a>
+          <a href="../diccionario/">Diccionario</a>
+          <a href="../accesibilidad/">Accesibilidad</a>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <a href="mailto:lsge.eg@gmail.com">lsge.eg@gmail.com</a>
+          <a href="https://x.com/info_lsge" rel="me noopener">X — @info_lsge</a>
+          <a href="https://www.instagram.com/lsge.info/" rel="me noopener">Instagram</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px">
+        <p style="font-size:.78rem;color:var(--footer-muted)">&copy; 2026 Asociación LSGE — Lengua de Signos de Guinea Ecuatorial.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/a11y-menu.js"></script>
+</body>
+</html>

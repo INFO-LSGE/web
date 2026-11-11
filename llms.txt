@@ -15,7 +15,7 @@
 - Sede: Malabo, Guinea Ecuatorial (GQ)
 - Presencia y actividad: Malabo, Bata y Mongomo
 - Ámbito: todo el territorio de Guinea Ecuatorial
-- Correo de contacto: lsge.ge@gmail.com
+- Correo de contacto: lsge.eg@gmail.com
 - Idiomas del sitio: español, francés, fang y bubi
 - Diccionario visual: 560 signos con glosa, categoría, parámetros fonológicos y vídeo
 - Variantes regionales documentadas: 7 regiones (Malabo, Bata, Mongomo, Oyala, Eyangong, Kogo y Annobón)
@@ -33,6 +33,15 @@ definitiva (aceptada, rechazada o aplazada) en un plazo aproximado de 30 días.
 - [Portada](https://info-lsge.github.io/web/): misión, la lengua, la comunidad, servicios e impacto.
 - [Gramática de referencia](https://info-lsge.github.io/web/linguistica/): fonología, léxico, morfología, sintaxis, semántica, pragmática y contexto sociohistórico de la LSGE.
 - [Diccionario visual](https://info-lsge.github.io/web/diccionario/): buscador de 560 signos con vídeo y parámetros fonológicos.
+- [Accesibilidad](https://info-lsge.github.io/web/accesibilidad/): declaración WCAG 2.2 AA, panel de baja visión y lectura por voz.
+
+## Lenguas y temas
+
+- La LSGE es una lengua nativa de Guinea Ecuatorial, no una traducción del español.
+- Lenguas del país que aparecen en el sitio: español, francés, fang (fan), bubi (buw)
+  y fa d'ambô o annobonés.
+- Temas: lingüística de las lenguas de signos, educación inclusiva y bilingüe,
+  discapacidad, sordera, sordoceguera, accesibilidad universal y tecnología accesible.
 
 ## Perfiles oficiales
 
@@ -42,8 +51,19 @@ definitiva (aceptada, rechazada o aplazada) en un plazo aproximado de 30 días.
 - Facebook: https://www.facebook.com/profile.php?id=61594612984588
 - WhatsApp: https://whatsapp.com/channel/0029VbC4dJtL2AU2fCbIFh2W
 
-## Organismos de referencia
+## Marco institucional y entidades de referencia
 
+Se citan como marco institucional y referencia. La mención no implica convenio,
+respaldo ni representación.
+
+- Ministerio de Estado de Educación, Ciencias, Enseñanza Profesional y Deportes de
+  Guinea Ecuatorial.
+- Ministerio de Asuntos Sociales e Igualdad de Género (ASIG): https://minasig.gob.gq/
+- Ministerio de Cultura, Turismo y Promoción Artesanal de Guinea Ecuatorial.
+- Centro Cultural de España en Malabo (CCEM), red de la AECID: https://ccemalabo.aecid.es/
+- GITGE, Gestor de Infraestructuras de Telecomunicaciones de Guinea Ecuatorial,
+  con oficinas en Malabo, Bata y Mongomo: https://gitge.com/
+- ONU, Convención sobre los Derechos de las Personas con Discapacidad: https://www.un.org/development/desa/disabilities/
 - WFD — World Federation of the Deaf: https://wfdeaf.org
 - WFDB — World Federation of the Deafblind: https://wfdb.eu
 - WASLI — World Association of Sign Language Interpreters: https://wasli.org

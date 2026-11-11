@@ -7,6 +7,7 @@
   <meta name="description" content="Diccionario visual interactivo de la LSGE. Busque entre 560 signos con parámetros fonológicos, vídeos y buscador inteligente en tiempo real.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Asociación LSGE">
+  <meta name="keywords" content="diccionario de lengua de signos, LSGE, vocabulario, lengua nativa, fang, bubi, annobón, lingüística, educación, discapacidad, sordo, sordociego, Guinea Ecuatorial, Malabo, Bata, Mongomo">
   <link rel="canonical" href="https://info-lsge.github.io/web/diccionario/">
   <link rel="llms" type="text/plain" href="https://info-lsge.github.io/web/llms.txt">
   <meta name="geo.region" content="GQ">
@@ -34,11 +35,13 @@
     "description": "Diccionario visual interactivo de la Lengua de Signos de Guinea Ecuatorial: 560 signos con glosa, categoría, parámetros fonológicos y vídeo.",
     "url": "https://info-lsge.github.io/web/diccionario/",
     "inLanguage": "es",
-    "about": {
-      "@type": "Language",
-      "name": "Lengua de Signos de Guinea Ecuatorial",
-      "alternateName": "LSGE"
-    },
+    "keywords": "diccionario de signos, lengua de signos, LSGE, fang, bubi, annobón, sordo, sordociego, Guinea Ecuatorial",
+    "about": [
+      { "@type": "Language", "name": "Lengua de Signos de Guinea Ecuatorial", "alternateName": "LSGE" },
+      { "@type": "Language", "name": "Fang", "alternateName": "fan" },
+      { "@type": "Language", "name": "Bubi", "alternateName": "buw" },
+      { "@type": "Language", "name": "Fa d'Ambô", "alternateName": "annobonés" }
+    ],
     "publisher": {
       "@type": "NGO",
       "name": "Asociación LSGE — Lengua de Signos de Guinea Ecuatorial",
@@ -69,7 +72,7 @@
       <span><span class="material-symbols-outlined" aria-hidden="true" style="font-size:1em;vertical-align:-3px">auto_stories</span> Diccionario Visual LSGE — 560 signos documentados</span>
       <div class="topbar__tools">
         <div id="a11yMount"></div>
-        <span id="signCount">50 signos</span>
+        <span id="signCount" aria-live="polite">50 signos</span>
       </div>
     </div>
   </div>
@@ -81,15 +84,13 @@
         <img src="../img/logo-oficial.svg" alt="LSGE" style="height:42px;width:auto;margin-right:12px" onerror="this.src='../img/logo-oficial.png'">
         <div><strong>Diccionario LSGE</strong><small>Buscador inteligente</small></div>
       </a>
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Navegación principal del diccionario">
         <a href="../">Inicio</a>
         <a href="../linguistica/">Gramática</a>
-        <a href="#" class="active">Diccionario</a>
+        <a href="#" class="active" aria-current="page">Diccionario</a>
       </nav>
     </div>
   </header>
-
-  <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
   <main id="main">
   <!-- SEARCH HERO -->
@@ -103,12 +104,14 @@
         <div class="search-box__input-wrap">
           <span class="search-box__icon material-symbols-outlined" aria-hidden="true">search</span>
           <input type="text" id="searchInput" class="search-box__input" placeholder="Buscar signo... (ej: HOLA, COMER, CASA)"
-            autocomplete="off" autofocus>
+            autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false"
+            aria-controls="suggestions" aria-describedby="searchHelp">
         </div>
-        <div class="search-box__suggestions" id="suggestions"></div>
+        <div class="search-box__suggestions" id="suggestions" role="listbox" aria-label="Sugerencias de signos" hidden></div>
       </div>
+      <p id="searchHelp" class="sr-only">Escribe una palabra y usa las flechas arriba y abajo para recorrer las sugerencias; pulsa Intro para abrir la ficha del signo.</p>
 
-      <div class="search-stats" id="searchStats" style="margin-top:16px;font-size:.82rem;opacity:.7;display:none">
+      <div class="search-stats" id="searchStats" role="status" aria-live="polite" style="margin-top:16px;font-size:.82rem;opacity:.7;display:none">
         <span id="statsText"></span>
       </div>
     </div>
@@ -119,7 +122,7 @@
     <div class="container">
 
       <!-- CATEGORIES -->
-      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:36px" id="categoryFilters"></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:36px" id="categoryFilters" role="group" aria-label="Filtrar por categoría"></div>
 
       <!-- EMPTY STATE -->
       <div class="empty-state" id="emptyState" style="display:none;text-align:center;padding:60px 20px">
@@ -131,13 +134,13 @@
 
       <!-- GRID -->
       <div class="signos-grid" id="signosGrid"></div>
-      <p id="resultCount" style="text-align:center;margin-top:32px;font-size:.82rem;color:var(--text-muted)"></p>
+      <p id="resultCount" role="status" aria-live="polite" style="text-align:center;margin-top:32px;font-size:.82rem;color:var(--text-muted)"></p>
     </div>
   </section>
   </main>
 
   <!-- TOOLTIP (video popup) -->
-  <div class="tltp" id="tltp">
+  <div class="tltp" id="tltp" aria-hidden="true">
     <div class="tltp__vid" id="tltpVid">
       <video loop muted playsinline id="tltpVideo" style="width:100%;height:100%;object-fit:cover;border-radius:12px">
         <source src="" type="video/mp4">
@@ -179,7 +182,7 @@
     <div class="container">
       <div class="site-footer__grid">
         <div><h4>Diccionario Visual LSGE</h4><p style="font-size:.85rem;color:var(--footer-muted);line-height:1.7">560 signos documentados con parámetros fonológicos. Herramienta interactiva para la comunidad sorda, intérpretes, investigadores y educadores.</p></div>
-        <div><h4>Navegar</h4><a href="../">Inicio</a><a href="../linguistica/">Gramática</a><a href="../#comunidad">Comunidad</a><a href="../#contacto">Contacto</a></div>
+        <div><h4>Navegar</h4><a href="../">Inicio</a><a href="../linguistica/">Gramática</a><a href="../#comunidad">Comunidad</a><a href="../#contacto">Contacto</a><a href="../accesibilidad/">Accesibilidad</a></div>
         <div><h4>Recursos</h4><a href="#" onclick="LsgeDict.exportData()"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">download</span> Exportar datos</a><a href="#" onclick="LsgeDict.runTests()"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">science</span> Ejecutar tests</a><a href="#"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">api</span> API Diccionario</a></div>
       </div>
       <div style="border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
