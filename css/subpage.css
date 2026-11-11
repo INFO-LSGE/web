@@ -2,7 +2,7 @@
 .topbar{background:var(--navy);color:var(--gold);font-size:.75rem;padding:4px 0;position:sticky;top:0;z-index:1002}
 .topbar__inner{display:flex;justify-content:space-between;align-items:center}
 .topbar__tools{display:flex;align-items:center;gap:12px;font-size:.78rem;cursor:default}
-.topbar__tools button{background:none;border:none;color:var(--gold);cursor:pointer;font-size:1rem}
+.topbar__tools > button,.topbar__tools .a11y-toggle{background:none;border:none;color:var(--gold);cursor:pointer;font-size:1rem}
 
 .site-header{background:var(--bg-card);border-bottom:1px solid var(--border);padding:16px 0;position:sticky;top:26px;z-index:1001}
 .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
