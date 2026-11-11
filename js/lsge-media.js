@@ -40,16 +40,18 @@
     [/linguistica/, 'GRAMÁTICA'],
     [/diccionario/, 'DICCIONARIO'],
     [/accesibilidad/, 'ACCESIBILIDAD'],
-    [/#$|^\.\.\/$|^\/web\/?$|^\.\/$|^$/, 'INICIO']
+    [/^\.\.\/$|^\/web\/?$|^\.\/$/, 'INICIO']
   ];
 
   function glossFor(el) {
     if (el.dataset && el.dataset.sign) return el.dataset.sign;
-    var href = el.getAttribute('href') || '';
-    for (var i = 0; i < SIGN_RULES.length; i++) {
-      if (SIGN_RULES[i][0].test(href)) return SIGN_RULES[i][1];
-    }
     if (el.id === 'navVideoBtn' || el.id === 'heroVideoBtn') return 'VÍDEO';
+    var href = el.getAttribute('href') || '';
+    if (href) {
+      for (var i = 0; i < SIGN_RULES.length; i++) {
+        if (SIGN_RULES[i][0].test(href)) return SIGN_RULES[i][1];
+      }
+    }
     var txt = (el.textContent || '').replace(/\s+/g, ' ').trim();
     return txt ? txt.toUpperCase() : '';
   }
