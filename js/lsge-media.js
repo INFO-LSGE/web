@@ -182,13 +182,16 @@
     var page = pageKey();
     var counters = {};
     var total = 0;
-    var SKIP = '.card,.service-card,.com-card,.portal,.feature,.stat,.impacto,.footer,.hero,.signo-card,.modal,.a11y-panel,.lsge-media';
+    var SKIP = '.lsge-row,.lsge-media,.a11y-panel,.sign-tip,.modal,.signo-card';
 
-    Array.prototype.slice.call(main.querySelectorAll('p')).forEach(function (p) {
+    var paras = Array.prototype.slice.call(main.querySelectorAll('p'));
+    var heroSub = document.querySelector('.hero .hero__subtitle');
+    if (heroSub) paras.unshift(heroSub);
+
+    paras.forEach(function (p) {
       var text = (p.textContent || '').replace(/\s+/g, ' ').trim();
-      if (text.length < 90) return;
+      if (!text) return;
       if (p.closest(SKIP) || p.closest('.lsge-row')) return;
-      if (p.nextElementSibling && p.nextElementSibling.classList.contains('lsge-media')) return;
 
       var section = p.closest('section[id]');
       var sid = section ? section.id : 'general';
@@ -217,6 +220,15 @@
       var video = row.querySelector('video');
       var badge = row.querySelector('.lsge-row__badge');
       video.src = BASE + file;
+
+      /* En tarjetas estrechas el vídeo va encima del texto */
+      function adapt() {
+        row.classList.toggle('lsge-row--stack', row.clientWidth < 480);
+      }
+      adapt();
+      if ('ResizeObserver' in window) {
+        new ResizeObserver(adapt).observe(row);
+      }
 
       /* ¿Existe ya el vídeo de este párrafo? Si no, se usa el clip provisional. */
       fetch(BASE + file, { method: 'HEAD' }).then(function (r) {

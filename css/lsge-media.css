@@ -98,3 +98,8 @@
   .lsge-row{grid-template-columns:1fr;gap:14px;margin-bottom:24px}
   .lsge-row__media{max-width:100%}
 }
+
+/* Contenedores estrechos (tarjetas): vídeo encima, texto debajo */
+.lsge-row--stack{grid-template-columns:1fr;gap:12px}
+.lsge-row--stack .lsge-row__media{max-width:320px;width:100%}
+.lsge-row--stack .lsge-row__text{max-width:none}
