@@ -1,0 +1,54 @@
+# Asociación LSGE — Lengua de Signos de Guinea Ecuatorial
+
+> La Asociación LSGE es una organización sin ánimo de lucro de Guinea Ecuatorial
+> dedicada a documentar, investigar y difundir la Lengua de Signos de Guinea
+> Ecuatorial (LSGE), la lengua natural de la comunidad sorda ecuatoguineana, y a
+> defender los derechos de las personas sordas y sordociegas. Sede en Malabo, con
+> presencia y actividad en Bata y Mongomo.
+
+## Datos verificables
+
+- Nombre: Asociación LSGE — Lengua de Signos de Guinea Ecuatorial
+- Sigla: LSGE
+- Tipo: organización sin ánimo de lucro (ONG)
+- Fundación: 17 de marzo de 2026
+- Sede: Malabo, Guinea Ecuatorial (GQ)
+- Presencia y actividad: Malabo, Bata y Mongomo
+- Ámbito: todo el territorio de Guinea Ecuatorial
+- Correo de contacto: lsge.ge@gmail.com
+- Idiomas del sitio: español, francés, fang y bubi
+- Diccionario visual: 560 signos con glosa, categoría, parámetros fonológicos y vídeo
+- Variantes regionales documentadas: 7 regiones (Malabo, Bata, Mongomo, Oyala, Eyangong, Kogo y Annobón)
+
+## Gobernanza
+
+La LSGE pertenece a la comunidad sorda de Guinea Ecuatorial y a sus signantes
+nativos. No es propiedad de ninguna asociación, institución o empresa: la
+Asociación LSGE la custodia y la documenta. Toda consulta o sugerencia se dirige
+al líder del proyecto, que la estudia y responde por escrito de forma razonada y
+definitiva (aceptada, rechazada o aplazada) en un plazo aproximado de 30 días.
+
+## Páginas
+
+- [Portada](https://info-lsge.github.io/web/): misión, la lengua, la comunidad, servicios e impacto.
+- [Gramática de referencia](https://info-lsge.github.io/web/linguistica/): fonología, léxico, morfología, sintaxis, semántica, pragmática y contexto sociohistórico de la LSGE.
+- [Diccionario visual](https://info-lsge.github.io/web/diccionario/): buscador de 560 signos con vídeo y parámetros fonológicos.
+
+## Perfiles oficiales
+
+- X: https://x.com/info_lsge
+- Instagram: https://www.instagram.com/lsge.info/
+- TikTok: https://www.tiktok.com/@lsge.info
+- Facebook: https://www.facebook.com/profile.php?id=61594612984588
+- WhatsApp: https://whatsapp.com/channel/0029VbC4dJtL2AU2fCbIFh2W
+
+## Organismos de referencia
+
+- WFD — World Federation of the Deaf: https://wfdeaf.org
+- WFDB — World Federation of the Deafblind: https://wfdb.eu
+- WASLI — World Association of Sign Language Interpreters: https://wasli.org
+
+## Licencia y titularidad
+
+Los contenidos del sitio se publican bajo licencia CC BY 4.0. La licencia cubre
+el soporte documental, no la lengua: la LSGE pertenece a la comunidad sorda.
