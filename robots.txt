@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /1/
 
-Sitemap: https://lsge.org/sitemap.xml
+Sitemap: https://info-lsge.github.io/web/sitemap.xml
