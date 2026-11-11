@@ -70,8 +70,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..600,0..1,0&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/subpage.css">
+  <link rel="stylesheet" href="../css/lsge-media.css">
 </head>
-<body class="subpage">
+<body class="subpage" id="app">
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
   <!-- TOP BAR -->
   <div class="topbar">
@@ -165,7 +167,7 @@
       </aside>
 
       <!-- CONTENT -->
-      <main class="content">
+      <main class="content" id="main" data-lsge-media>
 
         <!-- ÁREA 1 -->
         <article class="area-section" id="area1">
@@ -516,5 +518,6 @@
     // Sidebar active link on scroll
     document.querySelectorAll('.sidebar__link').forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));t&&t.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.sidebar__link').forEach(function(x){x.classList.remove('active')});this.classList.add('active')})});
   </script>
+  <script src="../js/lsge-media.js"></script>
 </body>
 </html>
