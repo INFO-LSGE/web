@@ -417,8 +417,7 @@ html.a11y-guide .a11y-reading-guide{display:block}
   .section-header__title{font-size:2.05rem}
   .section-header__desc{font-size:1rem}
 
-  /* Portales: una columna, tarjeta horizontal */
-  .portales__grid{grid-template-columns:1fr;gap:16px}
+  /* Portales: tarjeta horizontal */
   .portal__inner{padding:28px 32px;align-items:center}
   .portal__icon{width:64px;height:64px;font-size:2.6rem}
   .portal__title{font-size:1.4rem}
@@ -441,6 +440,10 @@ html.a11y-guide .a11y-reading-guide{display:block}
   .servicios__grid,.comunidad__grid{gap:16px}
   .impacto__grid{gap:12px}
   .footer__grid{gap:32px}
+}
+
+@media (min-width:769px) and (max-width:900px){
+  .portales__grid{grid-template-columns:1fr;gap:16px}
 }
 
 @media(max-width:768px){
