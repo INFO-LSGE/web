@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diccionario Visual LSGE — Lengua de Signos de Guinea Ecuatorial</title>
+  <meta name="description" content="Diccionario visual interactivo de la LSGE. Busque entre 560 signos con parámetros fonológicos, vídeos y buscador inteligente en tiempo real.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="../img/logo-oficial.png">
+  <link rel="apple-touch-icon" href="../img/logo-oficial.png">
+  <meta name="theme-color" content="#0f1e3a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..600,0..1,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/subpage.css">
+  <link rel="stylesheet" href="../css/tooltips.css">
+</head>
+<body class="subpage" id="app">
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><span class="material-symbols-outlined" aria-hidden="true" style="font-size:1em;vertical-align:-3px">auto_stories</span> Diccionario Visual LSGE — 560 signos documentados</span>
+      <div class="topbar__tools">
+        <div id="a11yMount"></div>
+        <span id="signCount">50 signos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../" class="site-header__logo">
+        <img src="../img/logo-oficial.svg" alt="LSGE" style="height:42px;width:auto;margin-right:12px" onerror="this.src='../img/logo-oficial.png'">
+        <div><strong>Diccionario LSGE</strong><small>Buscador inteligente</small></div>
+      </a>
+      <nav class="site-nav">
+        <a href="../">Inicio</a>
+        <a href="../linguistica/">Gramática</a>
+        <a href="#" class="active">Diccionario</a>
+      </nav>
+    </div>
+  </header>
+
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+  <main id="main">
+  <!-- SEARCH HERO -->
+  <section class="search-hero" style="background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff;padding:60px 0 50px;text-align:center">
+    <div class="container" style="max-width:700px">
+      <h1 style="font-size:2.5rem;font-weight:900;margin-bottom:8px;letter-spacing:-.02em">Diccionario Visual</h1>
+      <p style="font-size:1.05rem;opacity:.85;margin-bottom:32px">Busca cualquier signo. Pasa el cursor para ver parámetros y vídeo.</p>
+
+      <div class="search-box" id="searchBox">
+        <label class="sr-only" for="searchInput">Buscar signo</label>
+        <div class="search-box__input-wrap">
+          <span class="search-box__icon material-symbols-outlined" aria-hidden="true">search</span>
+          <input type="text" id="searchInput" class="search-box__input" placeholder="Buscar signo... (ej: HOLA, COMER, CASA)"
+            autocomplete="off" autofocus>
+        </div>
+        <div class="search-box__suggestions" id="suggestions"></div>
+      </div>
+
+      <div class="search-stats" id="searchStats" style="margin-top:16px;font-size:.82rem;opacity:.7;display:none">
+        <span id="statsText"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTERS + RESULTS -->
+  <section style="background:var(--bg);padding:32px 0 80px">
+    <div class="container">
+
+      <!-- CATEGORIES -->
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:36px" id="categoryFilters"></div>
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state" id="emptyState" style="display:none;text-align:center;padding:60px 20px">
+        <div style="font-size:4rem;margin-bottom:16px;color:var(--text-muted)"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:inherit">search_off</span></div>
+        <h3 style="font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:8px">No se encontraron signos</h3>
+        <p style="color:var(--text-secondary);margin-bottom:16px">Prueba con otra palabra o categoría.</p>
+        <button class="cat-btn" onclick="LsgeDict.reset()">Mostrar todos los signos</button>
+      </div>
+
+      <!-- GRID -->
+      <div class="signos-grid" id="signosGrid"></div>
+      <p id="resultCount" style="text-align:center;margin-top:32px;font-size:.82rem;color:var(--text-muted)"></p>
+    </div>
+  </section>
+  </main>
+
+  <!-- TOOLTIP (video popup) -->
+  <div class="tltp" id="tltp">
+    <div class="tltp__vid" id="tltpVid">
+      <video loop muted playsinline id="tltpVideo" style="width:100%;height:100%;object-fit:cover;border-radius:12px">
+        <source src="" type="video/mp4">
+      </video>
+      <div class="tltp__placeholder" id="tltpPlaceholder">🤟</div>
+    </div>
+    <div class="tltp__info">
+      <strong class="tltp__glosa" id="tltpGlosa"></strong>
+      <span class="tltp__params" id="tltpParams"></span>
+      <button class="tltp__detail-btn" id="tltpDetailBtn" onclick="LsgeDict.openDetail()"><span class="material-symbols-outlined" aria-hidden="true" style="font-size:1em;vertical-align:-2px">assignment</span> Ver ficha completa</button>
+    </div>
+  </div>
+
+  <!-- MODAL de detalle -->
+  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)LsgeDict.closeDetail()" role="dialog" aria-modal="true" aria-labelledby="modalGlosa">
+    <div class="modal" id="modal">
+      <button class="modal__close" onclick="LsgeDict.closeDetail()" aria-label="Cerrar ficha"><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+      <div class="modal__vid" id="modalVid">
+        <video loop muted playsinline id="modalVideo" style="width:100%;max-height:320px;object-fit:cover;border-radius:12px">
+          <source src="" type="video/mp4">
+        </video>
+        <div class="tltp__placeholder" id="modalPlaceholder" style="height:240px">🤟</div>
+      </div>
+      <h2 class="modal__glosa" id="modalGlosa"></h2>
+      <span class="modal__cat"></span>
+      <table class="modal__params">
+        <tr><td>Configuración (CM)</td><td id="modalCM"></td></tr>
+        <tr><td>Localización (LOC)</td><td id="modalLOC"></td></tr>
+        <tr><td>Movimiento (MOV)</td><td id="modalMOV"></td></tr>
+        <tr><td>Orientación (OP)</td><td id="modalOP"></td></tr>
+        <tr><td>CNM</td><td id="modalCNM"></td></tr>
+        <tr><td>Definición</td><td id="modalDef"></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div><h4>Diccionario Visual LSGE</h4><p style="font-size:.85rem;color:var(--footer-muted);line-height:1.7">560 signos documentados con parámetros fonológicos. Herramienta interactiva para la comunidad sorda, intérpretes, investigadores y educadores.</p></div>
+        <div><h4>Navegar</h4><a href="../">Inicio</a><a href="../linguistica/">Gramática</a><a href="../#comunidad">Comunidad</a><a href="../#contacto">Contacto</a></div>
+        <div><h4>Recursos</h4><a href="#" onclick="LsgeDict.exportData()"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">download</span> Exportar datos</a><a href="#" onclick="LsgeDict.runTests()"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">science</span> Ejecutar tests</a><a href="#"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">api</span> API Diccionario</a></div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <p style="font-size:.78rem;color:var(--footer-muted)">&copy; 2026 Asociación LSGE · Diccionario Visual</p>
+        <p style="font-size:.78rem;color:var(--footer-muted)" id="testResult"></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="diccionario_data.js"></script>
+  <script src="../js/tooltips.js"></script>
+  <script src="../js/a11y-menu.js"></script>
+</body>
+</html>

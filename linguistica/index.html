@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gramática LSGE — Portal de Lingüística | Lengua de Signos de Guinea Ecuatorial</title>
+  <meta name="description" content="Portal de lingüística de la LSGE. Gramática completa de referencia: fonología, léxico, morfología, sintaxis, semántica, pragmática y contexto sociohistórico de la Lengua de Signos de Guinea Ecuatorial.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="../img/logo-oficial.png">
+  <link rel="apple-touch-icon" href="../img/logo-oficial.png">
+  <meta name="theme-color" content="#0f1e3a">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..600,0..1,0&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/subpage.css">
+</head>
+<body class="subpage">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><span class="material-symbols-outlined" aria-hidden="true" style="font-size:1em;vertical-align:-3px">sign_language</span> Lengua de Signos de Guinea Ecuatorial</span>
+      <div class="topbar__tools">
+        <div id="a11yMount"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="../" class="site-header__logo">
+        <img src="../img/logo-oficial.svg" alt="LSGE" style="height:42px;width:auto;margin-right:12px" onerror="this.src='../img/logo-oficial.png'">
+        <div>
+          <strong>LSGE</strong>
+          <small>Portal de Lingüística</small>
+        </div>
+      </a>
+      <nav class="site-nav">
+        <a href="../">Inicio</a>
+        <a href="../diccionario/">Diccionario</a>
+        <a href="#" class="active">Gramática</a>
+        <a href="../#comunidad">Comunidad</a>
+        <a href="../#contacto">Contacto</a>
+      </nav>
+      <button class="search-trigger" onclick="document.querySelector('.search-overlay').classList.toggle('open')" aria-label="Buscar en la gramática"><span class="material-symbols-outlined" aria-hidden="true">search</span></button>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay">
+    <div class="container">
+      <label class="sr-only" for="gramaticaSearch">Buscar en la gramática</label>
+      <input type="text" id="gramaticaSearch" placeholder="Buscar en la gramática..." style="width:100%;padding:20px 28px;font-size:1.2rem;border:none;border-radius:12px;font-family:'Inter',sans-serif;outline:none;box-shadow:0 8px 32px rgba(0,0,0,.15)">
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="sub-hero" style="background:linear-gradient(135deg,var(--navy),var(--navy-light));color:#fff;padding:80px 0 60px;text-align:center">
+    <div class="container">
+      <nav class="breadcrumb" style="font-size:.78rem;opacity:.7;margin-bottom:24px"><a href="../" style="color:#fff">Inicio</a> &rsaquo; Gramática</nav>
+      <h1 style="font-size:clamp(2rem,4vw,3rem);font-weight:900;margin-bottom:12px;letter-spacing:-.02em">Gramática de la Lengua de Signos de Guinea Ecuatorial</h1>
+      <p style="font-size:1.1rem;opacity:.85;max-width:720px;margin:0 auto;line-height:1.7">Referencia lingüística completa organizada en 7 áreas de estudio. Basada en el modelo de gramáticas de referencia para lenguas de signos.</p>
+    </div>
+  </section>
+
+  <!-- MAIN LAYOUT -->
+  <div class="sub-layout">
+    <div class="container sub-layout__inner">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar__section sidebar__summary">
+          <h4 class="sidebar__title">Resumen</h4>
+          <p>La LSGE es una lengua visoespacial completa, con gramática propia y 5 parámetros fonológicos. Esta gramática de referencia documenta su estructura en 7 áreas de estudio, desde el contexto sociohistórico hasta la pragmática del discurso.</p>
+        </div>
+        <div class="sidebar__section">
+          <h4 class="sidebar__title">Áreas de estudio</h4>
+          <ul class="sidebar__nav">
+            <li><a href="#area1" class="sidebar__link active" data-area="area1"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">public</span> 1. Contexto Sociohistórico</a></li>
+            <li><a href="#area2" class="sidebar__link" data-area="area2"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">graphic_eq</span> 2. Fonología</a></li>
+            <li><a href="#area3" class="sidebar__link" data-area="area3"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">list_alt</span> 3. Léxico</a></li>
+            <li><a href="#area4" class="sidebar__link" data-area="area4"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">extension</span> 4. Morfología</a></li>
+            <li><a href="#area5" class="sidebar__link" data-area="area5"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">square_foot</span> 5. Sintaxis</a></li>
+            <li><a href="#area6" class="sidebar__link" data-area="area6"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">lightbulb</span> 6. Semántica</a></li>
+            <li><a href="#area7" class="sidebar__link" data-area="area7"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">chat</span> 7. Pragmática</a></li>
+          </ul>
+        </div>
+        <div class="sidebar__section">
+          <h4 class="sidebar__title">Recursos relacionados</h4>
+          <ul class="sidebar__links">
+            <li><a href="../diccionario/"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">auto_stories</span> Diccionario Visual LSGE</a></li>
+            <li><a href="#"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">abc</span> Alfabeto Dactilológico</a></li>
+            <li><a href="#"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">videocam</span> Videoteca de Signos</a></li>
+            <li><a href="#"><span class="material-symbols-outlined sidebar__icon" aria-hidden="true">picture_as_pdf</span> Descargar Gramática (PDF)</a></li>
+          </ul>
+        </div>
+        <div class="sidebar__section">
+          <h4 class="sidebar__title">Referencias académicas</h4>
+          <div class="ref-list">
+            <div class="ref-item"><span>Stokoe, W. (1960)</span> Sign Language Structure</div>
+            <div class="ref-item"><span>Sandler, W. & Lillo-Martin, D. (2006)</span> Sign Language and Linguistic Universals</div>
+            <div class="ref-item"><span>Gutiérrez, E. & Carreiras, M. (2009)</span> El papel de los parámetros fonológicos en el procesamiento de los signos de la LSE</div>
+            <div class="ref-item"><span>Parkhurst, S. & D. (2008)</span> SignoEscritura</div>
+            <div class="ref-item"><span>Herrero Blanco, A. (2009)</span> Gramática didáctica de la LSE</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="content">
+
+        <!-- ÁREA 1 -->
+        <article class="area-section" id="area1">
+          <h2 class="area-title">Área 1. Contexto Sociohistórico</h2>
+          <p class="area-lead">Historia de la LSGE, comunidad lingüística sorda de Guinea Ecuatorial, estatus legal y reconocimiento académico.</p>
+
+          <div class="chapters">
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>1. Historia de la LSGE</h3>
+              <p>La Lengua de Signos de Guinea Ecuatorial surge de la comunidad sorda ecuatoguineana antes de la época colonial. Durante generaciones, las personas sordas desarrollaron sistemas propios de comunicación mediante signos naturales, sin haber recibido educación formal. Con la creación del centro Las Manos Felices en Bata (2004) y los programas de Cruz Roja en Malabo (2006), se inició el proceso de recopilación y estudio de los signos utilizados por la comunidad.</p>
+              <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Leer documento completo: Introducción y Justificación Histórica</a>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>2. La Comunidad Lingüística</h3>
+              <p>La comunidad sorda de Guinea Ecuatorial es heterogénea y diversa. Incluye signantes nativos, signantes tardíos, intérpretes naturales, familiares oyentes y profesionales. La LSGE se extiende más allá de las personas sordas: familias, vecinos y comunidades enteras participan en su uso. Se estima que el uso real en entornos urbanos supera el 15-20% incluyendo usuarios directos e indirectos.</p>
+              <div class="doc-link-group">
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Variación dialectal en LSGE</a>
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Claves históricas de la lingüística actual</a>
+              </div>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>3. Estatus y Legislación</h3>
+              <p>La LSGE aún no cuenta con reconocimiento oficial como lengua nacional de Guinea Ecuatorial. Existen instrumentos legales de referencia: la Ley Nº 1/1999 de Régimen de ONG, la Ley Nº 11/1992 General de Asociaciones, y la propuesta de Ley de Igualdad, No Discriminación y Accesibilidad Universal de las Personas con Discapacidad. A nivel internacional, la Convención de la ONU sobre los Derechos de las Personas con Discapacidad y la Agenda 2063 de la Unión Africana proporcionan el marco para el reconocimiento.</p>
+              <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Reconocimiento académico de LSGE</a>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>4. El Estudio Lingüístico</h3>
+              <p>La investigación lingüística de la LSGE es un campo en desarrollo. Se ha establecido un corpus lingüístico con metodología de documentación audiovisual, anotación con ELAN y transcripción fonológica. Los estudios abarcan los 5 parámetros fonológicos, la estructura gramatical, el léxico documentado de 560 signos y las 7 áreas de la gramática de referencia.</p>
+              <div class="doc-link-group">
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Corpus lingüístico LSGE</a>
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Modelo lingüístico LSGE</a>
+              </div>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ÁREA 2 -->
+        <article class="area-section" id="area2">
+          <h2 class="area-title">Área 2. Fonología</h2>
+          <p class="area-lead">Estudio de los parámetros fonológicos que constituyen la estructura subléxica de los signos de la LSGE.</p>
+
+          <div class="chapters">
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>1. La Estructura Subléxica</h3>
+              <p>La fonología de las lenguas de signos estudia las unidades mínimas sin significado (parámetros fonológicos) que se combinan para formar signos. En la LSGE, como en toda lengua de signos, los parámetros ocurren simultáneamente: la configuración de la mano, la localización, el movimiento, la orientación y los componentes no manuales se producen todos al mismo tiempo.</p>
+              <p><strong>Principio fundamental (Stokoe, 1960):</strong> si dos signos se diferencian en un solo parámetro y tienen distinto significado, ese parámetro es fonológicamente contrastivo.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>2. Configuración de la Mano (CM)</h3>
+              <p>Se han documentado 20 configuraciones manuales contrastivas en LSGE, incluyendo: puño cerrado (CM-01), mano plana (CM-02), mano abierta (CM-03), índice extendido (CM-04), V (CM-05), tijera (CM-06), pinza (CM-07), tres dedos (CM-08), cinco (CM-09), gancho (CM-10), pulgar arriba (CM-11), cuerno (CM-12), L (CM-13), círculo (CM-14), C (CM-15), garra (CM-16), pistola (CM-17), cuenco (CM-18), puño cerrado compacto (CM-19) y cuernos (CM-20).</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>3. Localización (LOC), Movimiento (MOV) y Orientación (OP)</h3>
+              <p>Se han identificado 16 zonas de localización en la LSGE, desde la cabeza (frente, sien, ojo, nariz, mejilla, boca, oreja, barbilla) hasta el tronco (hombros, pecho, estómago), brazos, manos y espacio neutro. El movimiento puede ser amplio (trayectoria del brazo: rectilíneo, circular, arco, zigzag) o secundario (cambio de configuración, rotación de muñeca, vibración). La orientación de la palma presenta 7 direcciones contrastivas.</p>
+              <div class="doc-link-group">
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Fonología de la LSGE</a>
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Parámetros formativos (Querología)</a>
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>El papel de los parámetros (Gutiérrez & Carreiras, LSE)</a>
+              </div>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>4. Alfabeto Dactilológico</h3>
+              <p>La LSGE utiliza un alfabeto manual de 27 configuraciones (A-Z + Ñ) basado en el alfabeto dactilológico de la LSE con adaptaciones propias. Se emplea para nombres propios, palabras sin signo y siglas. El deletreo se realiza en el espacio neutro a la altura del pecho, con la palma orientada hacia el interlocutor.</p>
+              <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Alfabeto Dactilológico completo A-Z</a>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>5. Componentes No Manuales (CNM)</h3>
+              <p>Los CNM son elementos obligatorios que acompañan la realización de los signos: expresión facial (alegría, tristeza, sorpresa, enfado), movimiento de boca y labios (componente oral, soplo, protrusión), movimiento de cabeza (asentimiento, negación, inclinación) y movimiento de hombros y cuerpo. Los CNM pueden cambiar el significado del signo y son fonológicamente contrastivos.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ÁREA 3 -->
+        <article class="area-section" id="area3">
+          <h2 class="area-title">Área 3. Léxico</h2>
+          <p class="area-lead">Estudio del conjunto de signos de la LSGE, su organización, categorías gramaticales y documentación lexicográfica.</p>
+          <div class="chapters">
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>1. El Léxico Nativo</h3>
+              <p>El léxico central de la LSGE está compuesto por signos desarrollados de manera natural por la comunidad sorda ecuatoguineana. Incluye vocabulario organizado en 17 categorías temáticas: saludos, familia, profesiones, cuerpo y salud, emociones, colores, números, tiempo, naturaleza, alimentos, objetos, acciones, cualidades, lugares, sociedad, educación y religión. El léxico no-central incluye términos especializados y neologismos.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>2. Categorías Gramaticales</h3>
+              <p>La LSGE distingue 12 categorías gramaticales: nombre, verbo (simples, de concordancia, espaciales), adjetivo, adverbio, determinante, pronombre, demostrativo, preposición/conector, numeral, interrogativo y clasificador. Cada categoría presenta propiedades fonológicas y distribucionales específicas que permiten su identificación.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>3. Estructura de la Entrada Léxica</h3>
+              <p>Cada signo documentado incluye: identificador único (LSGE-XXXXX), glosa en español, categoría gramatical, parámetros fonológicos (CM, LOC, MOV, OP, CNM), tipo (mono/bimanual), definición, variantes regionales, etimología, notas de uso y frecuencia estimada. El diccionario actual documenta 560 signos con parámetros fonológicos completos.</p>
+              <div class="doc-link-group">
+                <a href="../diccionario/" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">auto_stories</span>Acceder al Diccionario Visual LSGE</a>
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Vocabulario base y léxico nativo</a>
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Léxico y diccionario LSGE</a>
+              </div>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ÁREA 4 -->
+        <article class="area-section" id="area4">
+          <h2 class="area-title">Área 4. Morfología</h2>
+          <p class="area-lead">Estudio de la estructura interna de los signos y los procesos de formación de palabras en la LSGE.</p>
+          <div class="chapters">
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>1. Flexión Verbal</h3>
+              <p>La LSGE presenta un rico sistema de flexión verbal mediante concordancia espacial. Los marcadores de persona (sujeto, objeto) y lugar se realizan modificando la dirección y trayectoria del movimiento. Los marcadores de número (dual, múltiple, exhaustivo) se expresan mediante la repetición del movimiento o cambios en la configuración manual. Los marcadores recíprocos indican acciones mutuas entre dos o más participantes.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>2. Composición y Derivación</h3>
+              <p>La composición combina dos o más signos para crear uno nuevo (ej. ESCUELA = ESCRIBIR + CASA). La derivación modifica un signo base para crear significados relacionados mediante cambios en los parámetros fonológicos. Los procesos derivativos más comunes incluyen la nominalización (cambio de MOV) y la verbalización (cambio de CM).</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>3. Clasificadores</h3>
+              <p>Los clasificadores son configuraciones manuales que representan visualmente clases de objetos o entidades. En LSGE se distinguen: clasificadores de entidad (CL:PERSONA, CL:VEHÍCULO), clasificadores de forma y tamaño (CL:OBJETO-PLANO, CL:OBJETO-CILÍNDRICO), clasificadores de manejo (cómo se agarra un objeto) y clasificadores de parte del cuerpo.</p>
+              <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Morfología de la LSGE</a>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ÁREA 5 -->
+        <article class="area-section" id="area5">
+          <h2 class="area-title">Área 5. Sintaxis</h2>
+          <p class="area-lead">Estudio de la combinación de signos para formar oraciones en la LSGE.</p>
+          <div class="chapters">
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>1. Orden de Constituyentes</h3>
+              <p>La LSGE utiliza el orden Sujeto-Verbo-Objeto (SVO) como estructura preferente, con flexibilidad para fines pragmáticos. La estructura de tópico-comentario sitúa la información conocida al inicio, marcada con elevación de cejas y pausa breve. Los complementos temporales suelen aparecer al inicio de la oración (AYER YO ARROZ COMER = Ayer yo comí arroz).</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>2. Negación y Preguntas</h3>
+              <p>La negación puede expresarse con signo independiente (NO), movimiento de cabeza simultáneo o verbos con negación incorporada (NO-SABER, NO-TENER, NO-QUERER). Las preguntas de sí/no se marcan con cejas elevadas sin cambiar el orden. Las preguntas QU- llevan cejas fruncidas y el interrogativo al final de la oración.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>3. Espacio Gramatical</h3>
+              <p>El espacio frente al cuerpo tiene función gramatical: el espacio cercano indica presente/aquí, el espacio medio es neutro, el lejano indica pasado/ausente, hacia adelante es futuro y hacia atrás sobre el hombro es pasado. Los verbos con concordancia espacial usan la trayectoria para indicar relaciones entre argumentos.</p>
+              <div class="doc-link-group">
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Sintaxis de la LSGE</a>
+                <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Estructura gramatical y sintaxis (pedagógica)</a>
+              </div>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ÁREA 6 -->
+        <article class="area-section" id="area6">
+          <h2 class="area-title">Área 6. Semántica</h2>
+          <p class="area-lead">Estudio del significado de los signos y las relaciones semánticas en la LSGE.</p>
+          <div class="chapters">
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>1. Tiempo, Aspecto y Modalidad</h3>
+              <p>El tiempo se marca mediante signos temporales independientes (AYER, HOY, MAÑANA) o por contexto, no por flexión verbal. El aspecto (completivo, continuativo, habitual) se expresa mediante modificación de los parámetros de movimiento. La modalidad (posibilidad, obligación, deseo) utiliza signos modales específicos y componentes no manuales.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>2. Relaciones Léxicas y Estructura Argumental</h3>
+              <p>La LSGE presenta sinonimia, antonimia, hiperonimia y meronimia, igual que las lenguas orales. La iconicidad juega un papel importante: muchos signos tienen una relación visual motivada con su significado, aunque el grado de iconicidad varía y no determina la comprensión. La estructura argumental de los verbos determina el número y tipo de participantes.</p>
+              <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Semántica de la LSGE</a>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ÁREA 7 -->
+        <article class="area-section" id="area7">
+          <h2 class="area-title">Área 7. Pragmática</h2>
+          <p class="area-lead">Estudio del uso de la LSGE en contexto comunicativo real.</p>
+          <div class="chapters">
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>1. Actos de Habla y Estructura del Discurso</h3>
+              <p>La LSGE permite realizar todos los actos de habla: asertivos, directivos, compromisivos, expresivos y declarativos. La estructura del discurso se organiza mediante el uso del espacio para establecer referentes, el cambio de rol para citar discurso directo, y los componentes no manuales para marcar límites discursivos.</p>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+            <div class="chapter">
+              <div class="chapter__body">
+              <h3>2. Uso del Espacio, Cortesía y Registro</h3>
+              <p>El espacio se usa para establecer referentes (asignar un locus a cada participante), realizar seguimiento referencial (señalar al locus para retomar un referente) y estructurar narraciones (espacio narrado vs. espacio real). La cortesía se expresa mediante la amplitud y velocidad del movimiento, la expresión facial y el uso de signos específicos (POR-FAVOR, GRACIAS).</p>
+              <a href="#" class="doc-link"><span class="material-symbols-outlined doc-link__icon" aria-hidden="true">description</span>Pragmática y discurso de la LSGE</a>
+              </div>
+              <div class="chapter__sign" aria-hidden="true">
+                <span class="material-symbols-outlined" aria-hidden="true">sign_language</span>
+                <span class="chapter__sign-label">Vídeo en LSGE<br>próximamente</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h4>Portal de Lingüística LSGE</h4>
+          <p style="font-size:.88rem;color:var(--footer-muted);line-height:1.7">Gramática de referencia de la Lengua de Signos de Guinea Ecuatorial. Proyecto de documentación lingüística de la comunidad sorda ecuatoguineana.</p>
+        </div>
+        <div>
+          <h4>Áreas</h4>
+          <a href="#area1">Contexto Sociohistórico</a>
+          <a href="#area2">Fonología</a>
+          <a href="#area3">Léxico</a>
+          <a href="#area4">Morfología</a>
+        </div>
+        <div style="margin-top:24px">
+          <a href="#area5">Sintaxis</a>
+          <a href="#area6">Semántica</a>
+          <a href="#area7">Pragmática</a>
+          <a href="../diccionario/">Diccionario Visual</a>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <p style="font-size:.85rem;color:var(--footer-muted)">Asociación LSGE<br>Malabo, Guinea Ecuatorial<br>contacto@lsge.org</p>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+        <p style="font-size:.78rem;color:var(--footer-muted)">&copy; 2026 Asociación LSGE. Portal de Lingüística.</p>
+        <div style="display:flex;gap:16px"><a href="#" style="font-size:.78rem;color:var(--footer-muted)">Accesibilidad</a><a href="#" style="font-size:.78rem;color:var(--footer-muted)">Aviso legal</a><a href="#" style="font-size:.78rem;color:var(--footer-muted)">Mapa web</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/a11y-menu.js"></script>
+  <script>
+    // Sidebar active link on scroll
+    document.querySelectorAll('.sidebar__link').forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));t&&t.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.sidebar__link').forEach(function(x){x.classList.remove('active')});this.classList.add('active')})});
+  </script>
+</body>
+</html>
