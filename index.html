@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LSGE — Lengua de Signos de Guinea Ecuatorial</title>
+<meta name="description" content="Asociación LSGE: documentación lingüística, educación y tecnología para la comunidad sorda de Guinea Ecuatorial.">
+<meta name="theme-color" content="#0d3b66">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤟</text></svg>">
+<style>
+  :root {
+    --azul: #0d3b66;
+    --azul-claro: #1f6feb;
+    --tinta: #14181f;
+    --gris: #55606e;
+    --fondo: #ffffff;
+    --fondo-alt: #f4f7fb;
+    --borde: #d7e0ea;
+    --radio: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--tinta);
+    background: var(--fondo);
+    line-height: 1.65;
+    font-size: 1.0625rem;
+  }
+  a { color: var(--azul-claro); }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid #f0a500;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .salto {
+    position: absolute; left: -9999px; top: 0;
+    background: var(--azul); color: #fff; padding: .75rem 1rem; z-index: 10;
+  }
+  .salto:focus { left: .5rem; top: .5rem; }
+  header.hero {
+    background: linear-gradient(160deg, #0d3b66 0%, #1f6feb 100%);
+    color: #fff;
+    padding: 4.5rem 1.25rem 5rem;
+    text-align: center;
+  }
+  header.hero .marca {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: .18em;
+    font-size: .8rem;
+    text-transform: uppercase;
+    background: rgba(255,255,255,.16);
+    padding: .4rem .9rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+  }
+  header.hero h1 {
+    font-size: clamp(1.9rem, 5.5vw, 3.3rem);
+    line-height: 1.15;
+    margin: 0 auto .9rem;
+    max-width: 20ch;
+  }
+  header.hero p.sub {
+    font-size: clamp(1rem, 2.3vw, 1.25rem);
+    max-width: 52ch;
+    margin: 0 auto 2rem;
+    color: #e6eefb;
+  }
+  .botones { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+  .boton {
+    display: inline-block;
+    padding: .8rem 1.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid transparent;
+  }
+  .boton.primario { background: #fff; color: var(--azul); }
+  .boton.secundario { border-color: rgba(255,255,255,.7); color: #fff; }
+  .boton.primario:hover { background: #eaf1fb; }
+
+  main { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 3.5rem 0; border-bottom: 1px solid var(--borde); }
+  section:last-of-type { border-bottom: 0; }
+  h2 {
+    font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+    margin: 0 0 .4rem;
+    color: var(--azul);
+  }
+  .intro { color: var(--gris); margin-top: 0; margin-bottom: 2rem; max-width: 62ch; }
+  .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+  }
+  .tarjeta {
+    background: var(--fondo-alt);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 1.25rem 1.35rem;
+  }
+  .tarjeta h3 { margin: 0 0 .35rem; font-size: 1.05rem; color: var(--azul); }
+  .tarjeta p { margin: 0; color: var(--gris); font-size: .96rem; }
+  ul.limpia { list-style: none; padding: 0; margin: 0; display: grid; gap: .85rem; }
+  ul.limpia li {
+    padding-left: 2rem;
+    position: relative;
+  }
+  ul.limpia li::before {
+    content: "✓";
+    position: absolute; left: 0; top: .05rem;
+    width: 1.4rem; height: 1.4rem;
+    display: grid; place-items: center;
+    background: #e3edfb; color: var(--azul);
+    border-radius: 50%; font-size: .8rem; font-weight: 700;
+  }
+  .destacado {
+    background: var(--fondo-alt);
+    border-left: 5px solid var(--azul-claro);
+    border-radius: 0 var(--radio) var(--radio) 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 0;
+  }
+  .contacto { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+  .contacto a { display: block; text-decoration: none; color: var(--tinta); }
+  .contacto .caja {
+    border: 1px solid var(--borde); border-radius: var(--radio);
+    padding: 1rem 1.2rem; transition: border-color .15s;
+  }
+  .contacto a:hover .caja { border-color: var(--azul-claro); }
+  .contacto .etiqueta { display: block; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gris); }
+  .contacto .valor { font-weight: 600; color: var(--azul-claro); word-break: break-word; }
+  footer {
+    background: var(--azul);
+    color: #cddcf0;
+    padding: 2.5rem 1.25rem;
+    font-size: .9rem;
+  }
+  footer .interior { max-width: 62rem; margin: 0 auto; display: grid; gap: 1rem; }
+  footer a { color: #fff; }
+  footer strong { color: #fff; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido principal</a>
+
+<header class="hero">
+  <span class="marca">Asociación LSGE</span>
+  <h1>Lengua de Signos de Guinea Ecuatorial</h1>
+  <p class="sub">
+    Documentar una lengua viva, formar intérpretes y construir tecnología accesible
+    para la comunidad sorda de Guinea Ecuatorial.
+  </p>
+  <div class="botones">
+    <a class="boton primario" href="#proyecto">Conoce el proyecto</a>
+    <a class="boton secundario" href="#contacto">Contactar</a>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section id="proyecto">
+    <h2>Qué es la LSGE</h2>
+    <p class="intro">
+      La Lengua de Signos de Guinea Ecuatorial (LSGE) es la lengua natural de la
+      comunidad sorda ecuatoguineana. Nace de siglos de uso comunitario y, desde
+      los años 2000 —con el centro <em>Las Manos Felices</em> (Bata, 2004) y los
+      programas de Cruz Roja (Malabo, 2006)— se inició su recopilación, estudio y
+      difusión sistemática.
+    </p>
+    <div class="destacado">
+      <p style="margin:0">
+        <strong>La lengua pertenece a la comunidad sorda.</strong> No es propiedad de
+        ninguna asociación, institución o empresa. La Asociación LSGE la custodia y
+        la documenta, pero la autoridad sobre la LSGE es de sus signantes nativos.
+      </p>
+    </div>
+  </section>
+
+  <section id="lineas">
+    <h2>Líneas de trabajo</h2>
+    <p class="intro">
+      Un mismo conjunto de datos lingüísticos, cuidado una sola vez, al servicio de
+      muchos usos distintos.
+    </p>
+    <div class="tarjetas">
+      <article class="tarjeta">
+        <h3>Documentación lingüística</h3>
+        <p>Gramática de referencia, léxico y diccionario visual con variantes regionales de las siete regiones.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Diccionario accesible</h3>
+        <p>Consulta de signos con vídeo, pensada para funcionar sin conexión a internet.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Material educativo</h3>
+        <p>Contenidos por niveles y recursos para escuelas inclusivas.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Formación de intérpretes</h3>
+        <p>Guías, código deontológico y plan de formación por niveles.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Accesibilidad</h3>
+        <p>Guías, señalética y adaptaciones para espacios y servicios públicos.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Tecnología e IA</h3>
+        <p>Reconocimiento, traducción y generación de lengua de signos, siempre con consentimiento y revisión humana.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="principios">
+    <h2>Cómo trabajamos</h2>
+    <p class="intro">
+      Estos principios no son un adorno: condicionan cada decisión técnica.
+    </p>
+    <ul class="limpia">
+      <li><strong>Una sola fuente de verdad.</strong> Un signo se documenta una vez y el resto lo referencia; nunca se duplica.</li>
+      <li><strong>Funciona sin internet.</strong> Guinea Ecuatorial tiene conectividad limitada: todo debe servir sin conexión.</li>
+      <li><strong>Accesibilidad desde el diseño.</strong> No es un parche del final.</li>
+      <li><strong>El dato lingüístico no se borra.</strong> Un signo en desuso se marca como tal y conserva su vídeo e historial: es memoria de la comunidad.</li>
+      <li><strong>La IA propone, el humano aprueba.</strong> Ningún sistema automático modifica datos oficiales.</li>
+      <li><strong>Nada de datos personales expuestos.</strong> Ni imágenes identificables de menores, ni listas de alumnado, ni grabaciones sin consentimiento.</li>
+      <li><strong>Las consultas y sugerencias van al líder del proyecto</strong>, que las estudia y responde por escrito: aceptada, rechazada o aplazada. Ninguna queda sin contestar.</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p class="intro">Malabo, Guinea Ecuatorial.</p>
+    <div class="contacto">
+      <a href="mailto:contacto@lsge.org">
+        <span class="caja"><span class="etiqueta">Email</span><span class="valor">contacto@lsge.org</span></span>
+      </a>
+      <a href="https://x.com/info_lsge" rel="me noopener">
+        <span class="caja"><span class="etiqueta">X</span><span class="valor">@info_lsge</span></span>
+      </a>
+      <a href="https://www.instagram.com/lsge.info/" rel="me noopener">
+        <span class="caja"><span class="etiqueta">Instagram</span><span class="valor">lsge.info</span></span>
+      </a>
+      <a href="https://www.tiktok.com/@lsge.info" rel="me noopener">
+        <span class="caja"><span class="etiqueta">TikTok</span><span class="valor">@lsge.info</span></span>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61594612984588" rel="me noopener">
+        <span class="caja"><span class="etiqueta">Facebook</span><span class="valor">Asociación LSGE</span></span>
+      </a>
+      <a href="https://whatsapp.com/channel/0029VbC4dJtL2AU2fCbIFh2W" rel="me noopener">
+        <span class="caja"><span class="etiqueta">WhatsApp</span><span class="valor">Canal oficial</span></span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="interior">
+    <p style="margin:0"><strong>Asociación LSGE</strong> — Lengua de Signos de Guinea Ecuatorial.</p>
+    <p style="margin:0">
+      Los contenidos de este sitio se publican bajo licencia
+      <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC BY 4.0</a>.
+      La licencia cubre el soporte, no la lengua: la LSGE pertenece a la comunidad sorda.
+    </p>
+    <p style="margin:0">
+      Colaboramos con <a href="https://wfdeaf.org" rel="noopener">WFD</a>,
+      <a href="https://wfdb.eu" rel="noopener">WFDB</a> y
+      <a href="https://wasli.org" rel="noopener">WASLI</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
