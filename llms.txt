@@ -34,6 +34,9 @@ definitiva (aceptada, rechazada o aplazada) en un plazo aproximado de 30 días.
 - [Gramática de referencia](https://info-lsge.github.io/web/linguistica/): fonología, léxico, morfología, sintaxis, semántica, pragmática y contexto sociohistórico de la LSGE.
 - [Diccionario visual](https://info-lsge.github.io/web/diccionario/): buscador de 560 signos con vídeo y parámetros fonológicos.
 - [Accesibilidad](https://info-lsge.github.io/web/accesibilidad/): declaración WCAG 2.2 AA, panel de baja visión y lectura por voz.
+- [Blog](https://info-lsge.github.io/web/blog/): notas sobre lingüística, diccionario, educación y proyecto.
+  - RSS: https://info-lsge.github.io/web/blog/rss.xml
+  - JSON Feed: https://info-lsge.github.io/web/blog/feed.json
 
 ## Lenguas y temas
 

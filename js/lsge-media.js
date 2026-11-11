@@ -40,6 +40,7 @@
     [/linguistica/, 'GRAMÁTICA'],
     [/diccionario/, 'DICCIONARIO'],
     [/accesibilidad/, 'ACCESIBILIDAD'],
+    [/blog/, 'BLOG'],
     [/^\.\.\/$|^\/web\/?$|^\.\/$/, 'INICIO']
   ];
 

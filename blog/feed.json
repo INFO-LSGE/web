@@ -1,0 +1,67 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Blog — Asociación LSGE",
+  "home_page_url": "https://info-lsge.github.io/web/blog/",
+  "feed_url": "https://info-lsge.github.io/web/blog/feed.json",
+  "description": "Notas sobre la Lengua de Signos de Guinea Ecuatorial, el diccionario, la educación y la comunidad sorda.",
+  "language": "es",
+  "items": [
+    {
+      "id": "https://info-lsge.github.io/web/blog/la-lsge-es-una-lengua/",
+      "url": "https://info-lsge.github.io/web/blog/la-lsge-es-una-lengua/",
+      "title": "La LSGE es una lengua, no una traducción del español",
+      "summary": "La Lengua de Signos de Guinea Ecuatorial tiene gramática propia, cinco parámetros fonológicos y variantes regionales. No es español con las manos.",
+      "content_html": "<p>La Lengua de Signos de Guinea Ecuatorial (LSGE) es la lengua natural de la comunidad sorda ecuatoguineana. No es español hecho con las manos ni un código inventado para traducir palabra por palabra: es una lengua completa, con su propia gramática, su propio léxico y sus propias reglas de uso.</p><p>Como cualquier lengua, se aprende en comunidad, se transmite entre generaciones y cambia con el tiempo. La Asociación LSGE la documenta y la custodia, pero no la posee.</p><h2>Una gramática propia</h2><p>La LSGE se organiza en el espacio. Quien firma usa la configuración de la mano, la localización, el movimiento, la orientación y los componentes no manuales —cejas, mirada, boca, postura— para construir significado. Esos cinco parámetros no son adornos: cambian el sentido de un signo.</p><p>Por eso no se puede traducir del español palabra por palabra. Una frase en LSGE tiene su propio orden y su propia estructura visoespacial.</p><h2>Una lengua con variantes</h2><p>La LSGE se usa en todo el país y presenta variantes regionales. El proyecto documenta siete regiones: Malabo, Bata, Mongomo, Oyala, Eyangong, Kogo y Annobón. Esa diversidad no es un defecto: es riqueza lingüística y memoria de la comunidad.</p><h2>Por qué importa llamarla lengua</h2><p>Reconocer la LSGE como lengua tiene consecuencias prácticas: educación bilingüe para el alumnado sordo, intérpretes formados, acceso a la justicia y a la sanidad, y respeto a la identidad de quienes la usan a diario.</p><blockquote><p>La LSGE pertenece a la comunidad sorda. La Asociación LSGE solo la custodia y la documenta.</p></blockquote><p>Ese principio guía todo el proyecto: el diccionario, la gramática, los materiales educativos y la tecnología.</p>",
+      "date_published": "2026-11-11T09:00:00+00:00",
+      "date_modified": "2026-11-11T09:00:00+00:00",
+      "tags": [
+        "Lingüística",
+        "LSGE",
+        "Comunidad sorda"
+      ],
+      "authors": [
+        {
+          "name": "Asociación LSGE"
+        }
+      ]
+    },
+    {
+      "id": "https://info-lsge.github.io/web/blog/diccionario-visual-560-signos/",
+      "url": "https://info-lsge.github.io/web/blog/diccionario-visual-560-signos/",
+      "title": "El diccionario visual de la LSGE ya reúne 560 signos",
+      "summary": "560 signos con glosa, categoría, definición y los cinco parámetros fonológicos. Así está organizado el diccionario visual de la LSGE.",
+      "content_html": "<p>El diccionario visual de la LSGE reúne ya 560 signos documentados. Cada entrada incluye glosa, categoría gramatical, definición y los cinco parámetros fonológicos: configuración, localización, movimiento, orientación y componentes no manuales.</p><p>Se puede consultar por palabra o por categoría —saludos, familia, comida, verbos, tiempo, colores, números y lugares— y está pensado para funcionar también con conexión lenta.</p><h2>Cómo está organizado</h2><p>Cada signo es una ficha independiente. La misma ficha alimenta el buscador, la exportación de datos y los materiales educativos: el dato se documenta una vez y no se duplica.</p><p>El diccionario convive con la gramática de referencia, que explica cómo se combinan los signos y qué papel tienen el espacio y el cuerpo.</p><h2>Qué falta</h2><p>Los vídeos. Las fichas muestran un pictograma mientras la grabación de cada signo no esté disponible. También faltan revisiones de la comunidad: ningún signo debería publicarse sin la mirada de sus signantes nativos.</p><p>El siguiente paso es grabar los signos con calidad suficiente, con fondo limpio y buena luz, y revisarlos con hablantes de cada región.</p><p><a href=\"https://info-lsge.github.io/web/diccionario/\">Abrir el diccionario visual</a></p>",
+      "date_published": "2026-11-11T09:00:00+00:00",
+      "date_modified": "2026-11-11T09:00:00+00:00",
+      "tags": [
+        "Diccionario",
+        "Documentación",
+        "Accesibilidad"
+      ],
+      "authors": [
+        {
+          "name": "Asociación LSGE"
+        }
+      ]
+    },
+    {
+      "id": "https://info-lsge.github.io/web/blog/como-colaborar-con-la-lsge/",
+      "url": "https://info-lsge.github.io/web/blog/como-colaborar-con-la-lsge/",
+      "title": "Cómo colaborar con la Asociación LSGE",
+      "summary": "Cuotas, donaciones, materiales, tiempo o difusión. Y una norma: toda consulta o sugerencia recibe respuesta escrita en unos 30 días.",
+      "content_html": "<p>La Asociación LSGE acepta cuotas, donaciones, subvenciones, legados y ayudas, según el artículo 31 de sus estatutos. Pero colaborar no es solo dar dinero: también es dar tiempo, materiales, conocimiento o difusión.</p><h2>Formas de colaborar</h2><ul><li>Grabar signos para el diccionario y para el menú del sitio.</li><li>Revisar fichas y traducciones con signantes nativos de cada región.</li><li>Prestar material educativo, tecnológico o espacios para talleres.</li><li>Interpretar en actos, cursos o servicios públicos.</li><li>Difundir el proyecto entre escuelas, familias y entidades.</li></ul><h2>Cómo se decide</h2><p>Toda consulta o sugerencia se dirige al líder del proyecto, que la estudia y responde por escrito de forma razonada y definitiva —aceptada, rechazada o aplazada— en un plazo aproximado de 30 días. Ninguna queda sin contestar.</p><h2>Qué necesitamos ahora</h2><p>Vídeos para el diccionario y para los once elementos del menú, revisión lingüística de las fichas y apoyo para mantener el sitio y los materiales educativos.</p><p>Escríbenos a <a href=\"mailto:lsge.eg@gmail.com\">lsge.eg@gmail.com</a> indicando en qué quieres colaborar.</p>",
+      "date_published": "2026-11-11T09:00:00+00:00",
+      "date_modified": "2026-11-11T09:00:00+00:00",
+      "tags": [
+        "Comunidad",
+        "Colaboración",
+        "Proyecto"
+      ],
+      "authors": [
+        {
+          "name": "Asociación LSGE"
+        }
+      ]
+    }
+  ]
+}

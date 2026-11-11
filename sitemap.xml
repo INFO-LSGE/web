@@ -9,7 +9,7 @@
   <url>
     <loc>https://info-lsge.github.io/web/diccionario/</loc>
     <lastmod>2026-11-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
@@ -21,7 +21,31 @@
   <url>
     <loc>https://info-lsge.github.io/web/accesibilidad/</loc>
     <lastmod>2026-11-11</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://info-lsge.github.io/web/blog/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://info-lsge.github.io/web/blog/la-lsge-es-una-lengua/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://info-lsge.github.io/web/blog/diccionario-visual-560-signos/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://info-lsge.github.io/web/blog/como-colaborar-con-la-lsge/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

@@ -1,0 +1,100 @@
+/* === BLOG LSGE === */
+.blog-hero{padding:60px 0 38px;background:var(--bg);text-align:center}
+.blog-hero__tag{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold-text);background:var(--gold-light);
+  padding:5px 14px;border-radius:100px;margin-bottom:14px;
+}
+.blog-hero__title{
+  font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;letter-spacing:-.02em;
+  color:var(--text);line-height:1.15;margin-bottom:12px;
+}
+.blog-hero__desc{max-width:640px;margin:0 auto;color:var(--text-secondary);line-height:1.75}
+.blog-hero__feeds{margin-top:16px;font-size:.85rem;color:var(--text-muted)}
+.blog-hero__feeds a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+
+.blog-list-wrap{padding:8px 0 84px;background:var(--bg)}
+.blog-list{max-width:820px;margin:0 auto;display:grid;gap:18px}
+.post-card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:18px;
+  padding:26px 30px;box-shadow:var(--card-shadow);
+}
+.post-card__meta{font-size:.76rem;color:var(--text-muted);margin-bottom:6px}
+.post-card__title{font-size:1.45rem;font-weight:800;line-height:1.3;letter-spacing:-.01em}
+.post-card__title a{color:var(--text);text-decoration:none}
+.post-card__title a:hover{color:var(--gold-text)}
+.post-card__excerpt{color:var(--text-secondary);line-height:1.7;margin:10px 0 14px}
+.post-card__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.post-card__more{font-weight:700;color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+
+.tag{
+  display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--text-secondary);
+  background:var(--bg-alt);border:1px solid var(--border);
+  padding:2px 9px;border-radius:100px;
+}
+
+/* === ARTÍCULO === */
+.post{padding-bottom:84px;background:var(--bg)}
+.breadcrumb{font-size:.8rem;color:var(--text-muted)}
+.breadcrumb a{color:var(--text-secondary);text-decoration:underline;text-underline-offset:2px}
+.post__header{max-width:760px;margin:0 auto;padding:26px 0 18px}
+.post__meta{font-size:.78rem;color:var(--text-muted);margin-bottom:8px}
+.post__title{
+  font-size:clamp(1.9rem,4.2vw,2.75rem);font-weight:900;line-height:1.14;
+  letter-spacing:-.025em;color:var(--text);margin-bottom:12px;
+}
+.post__tags{display:flex;flex-wrap:wrap;gap:6px}
+.post__body{max-width:760px;margin:0 auto}
+.post__body p{color:var(--text-secondary);line-height:1.85;margin:0 0 18px}
+.post__body h2{
+  font-size:1.35rem;font-weight:800;color:var(--text);line-height:1.3;
+  margin:34px 0 12px;padding-top:10px;border-top:1px solid var(--border);
+}
+.post__body ul{padding-left:22px;margin:0 0 18px}
+.post__body li{color:var(--text-secondary);line-height:1.8;margin-bottom:6px}
+.post__body li::marker{color:var(--gold-text)}
+.post__body blockquote{
+  margin:24px 0;padding:16px 20px;background:var(--bg-alt);
+  border-left:4px solid var(--gold);border-radius:0 12px 12px 0;
+}
+.post__body blockquote p{margin:0;color:var(--text);font-size:1.05rem;line-height:1.7}
+.post__body a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+.post__body code{font-size:.92em;background:var(--bg-alt);border:1px solid var(--border);border-radius:5px;padding:1px 5px}
+
+/* === COMPARTIR === */
+.share{max-width:760px;margin:26px auto;padding-top:16px;border-top:1px solid var(--border)}
+.share__title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}
+.share__row{display:flex;flex-wrap:wrap;gap:8px}
+.share__btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--bg-card);border:1px solid var(--border);border-radius:100px;
+  padding:7px 15px;font-size:.8rem;font-weight:600;color:var(--text-secondary);
+  cursor:pointer;font-family:inherit;text-decoration:none;transition:all .18s;
+}
+.share__btn:hover,.share__btn:focus-visible{border-color:var(--gold);color:var(--gold-text)}
+.share__status{font-size:.78rem;font-weight:600;color:var(--text-muted);min-height:1.2em;margin-top:8px}
+
+/* === NAVEGACIÓN ENTRE ARTÍCULOS === */
+.post-nav{
+  max-width:760px;margin:36px auto 0;padding-top:24px;
+  border-top:1px solid var(--border);
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;
+}
+.post-nav__link{
+  display:block;padding:14px 16px;border:1px solid var(--border);border-radius:14px;
+  background:var(--bg-card);text-decoration:none;transition:border-color .18s;
+}
+.post-nav__link:hover{border-color:var(--gold)}
+.post-nav__link span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:4px}
+.post-nav__link strong{display:block;font-size:.92rem;color:var(--text);line-height:1.4}
+.post-nav__link--next{text-align:right}
+
+@media(max-width:767px){
+  .blog-hero{padding:44px 0 30px}
+  .post-card{padding:22px 20px}
+  .post-nav{grid-template-columns:1fr}
+  .post-nav__link--next{text-align:left}
+  .share__row{gap:6px}
+  .share__btn{font-size:.76rem;padding:7px 12px}
+}
