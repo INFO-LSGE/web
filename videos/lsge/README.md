@@ -45,6 +45,10 @@ videos/signos/menu-video.mp4
 El tooltip del menú los reproduce en silencio y en bucle al pasar el ratón o al
 enfocar con el teclado.
 
+Mientras un signo concreto no exista, el tooltip reproduce `videos/lsge/demo-bien.mp4`
+como **muestra** y lo indica: «Muestra del diccionario · signo de "X" pendiente».
+Al colocar el archivo `menu-<signo>.mp4`, sustituye a la muestra automáticamente.
+
 ## Muestra publicada
 
 `videos/lsge/demo-bien.mp4` — signo **BIEN**, extraído del diccionario
