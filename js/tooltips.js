@@ -279,12 +279,18 @@ var LsgeDict = (function() {
       els.tltpVideo.pause();
     }
     els.tltp.classList.add('visible');
+    els.tltp.removeAttribute('inert');
+    var detailBtn = document.getElementById('tltpDetailBtn');
+    if (detailBtn) detailBtn.removeAttribute('tabindex');
     moveTooltip(e);
   }
 
   function hideTooltip() {
     tipTimeout = setTimeout(function() {
       els.tltp.classList.remove('visible');
+      els.tltp.setAttribute('inert', '');
+      var detailBtn = document.getElementById('tltpDetailBtn');
+      if (detailBtn) detailBtn.setAttribute('tabindex', '-1');
       els.tltpVideo.pause();
     }, 200);
   }
@@ -299,7 +305,13 @@ var LsgeDict = (function() {
 
   if (els.tltp) {
     els.tltp.addEventListener('mouseenter', function(){if(tipTimeout)clearTimeout(tipTimeout)});
-    els.tltp.addEventListener('mouseleave', function(){els.tltp.classList.remove('visible');els.tltpVideo.pause()});
+    els.tltp.addEventListener('mouseleave', function(){
+      els.tltp.classList.remove('visible');
+      els.tltp.setAttribute('inert', '');
+      var detailBtn = document.getElementById('tltpDetailBtn');
+      if (detailBtn) detailBtn.setAttribute('tabindex', '-1');
+      els.tltpVideo.pause();
+    });
   }
 
   /* === MODAL DETAIL === */
