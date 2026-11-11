@@ -20,6 +20,9 @@ import html
 import json
 import os
 import re
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import shell
 from datetime import datetime, timezone
 from email.utils import format_datetime
 
@@ -172,64 +175,23 @@ def page(
   <link rel="stylesheet" href="%(root)scss/subpage.css">
   <link rel="stylesheet" href="%(root)scss/lsge-media.css">
   <link rel="stylesheet" href="%(root)scss/blog.css">
+  <link rel="stylesheet" href="%(root)scss/shell.css">
 </head>
 <body class="subpage" id="app">
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <span><span class="material-symbols-outlined" aria-hidden="true" style="font-size:1em;vertical-align:-3px">rss_feed</span> Blog de la Asociación LSGE</span>
-      <div class="topbar__tools">
-        <div id="a11yMount"></div>
-      </div>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="%(root)s" class="site-header__logo" aria-label="Asociación LSGE — inicio">
-        <img src="%(root)simg/logo-oficial.svg" alt="" style="height:42px;width:auto;margin-right:12px" onerror="this.src='%(root)simg/logo-oficial.png'">
-        <div><strong>Asociación LSGE</strong><small>Blog</small></div>
-      </a>
-      %(nav)s
-    </div>
-  </header>
+  %(header)s
 
   <main id="main"%(mainattr)s>
 %(main)s
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
-        <div>
-          <h4>Asociación LSGE</h4>
-          <p style="font-size:.85rem;color:var(--footer-muted);line-height:1.7">Lengua de Signos de Guinea Ecuatorial. Malabo · Bata · Mongomo.</p>
-        </div>
-        <div>
-          <h4>Navegar</h4>
-          <a href="%(root)s">Inicio</a>
-          <a href="%(root)slinguistica/">Gramática</a>
-          <a href="%(root)sdiccionario/">Diccionario</a>
-          <a href="%(root)sblog/">Blog</a>
-        </div>
-        <div>
-          <h4>Suscribirse</h4>
-          <a href="%(rss)s">RSS</a>
-          <a href="%(feed)s">JSON Feed</a>
-          <a href="mailto:lsge.eg@gmail.com">lsge.eg@gmail.com</a>
-          <a href="%(root)saccesibilidad/">Accesibilidad</a>
-        </div>
-      </div>
-      <div style="border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px">
-        <p style="font-size:.78rem;color:var(--footer-muted)">&copy; 2026 Asociación LSGE — Lengua de Signos de Guinea Ecuatorial.</p>
-      </div>
-    </div>
-  </footer>
+  %(footer)s
 
   <script src="%(root)sjs/a11y-menu.js"></script>
   <script src="%(root)sjs/share.js"></script>
   <script src="%(root)sjs/lsge-media.js"></script>
+  <script src="%(root)sjs/nav-shared.js"></script>
 </body>
 </html>
 """ % {
@@ -246,6 +208,8 @@ def page(
         "main": main_html,
         "nav": nav(root, active),
         "mainattr": main_attr,
+        "header": shell.header(root, active),
+        "footer": shell.footer(root),
     }
 
 

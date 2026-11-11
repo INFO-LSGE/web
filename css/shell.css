@@ -1,0 +1,10 @@
+/* === CABECERA Y PIE COMPARTIDOS CON LA PORTADA === */
+body.subpage main{padding-top:104px}
+body.subpage .nav{background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--nav-shadow)}
+body.subpage .toolbar__right{margin-left:auto}
+body.subpage .nav__links a.active{color:var(--gold-text)}
+body.subpage .footer{margin-top:0}
+
+@media(max-width:767px){
+  body.subpage main{padding-top:96px}
+}

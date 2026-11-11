@@ -73,41 +73,45 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/subpage.css">
   <link rel="stylesheet" href="../css/lsge-media.css">
+  <link rel="stylesheet" href="../css/shell.css">
 </head>
 <body class="subpage" id="app">
   <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
   <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <span><span class="material-symbols-outlined" aria-hidden="true" style="font-size:1em;vertical-align:-3px">sign_language</span> Lengua de Signos de Guinea Ecuatorial</span>
-      <div class="topbar__tools">
-        <div id="a11yMount"></div>
+  <div class="toolbar">
+    <div class="container toolbar__inner">
+      <div class="toolbar__right">
+        <div class="toolbar__theme"><div id="a11yMount"></div></div>
+        <a href="../" class="toolbar__brand" aria-label="Asociación LSGE — inicio">
+          <img src="../img/logo-oficial.svg" alt="" class="toolbar__logo" onerror="this.src='../img/logo-oficial.png'">
+          <span>Asociación LSGE</span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="../" class="site-header__logo">
-        <img src="../img/logo-oficial.svg" alt="LSGE" style="height:42px;width:auto;margin-right:12px" onerror="this.src='../img/logo-oficial.png'">
-        <div>
-          <strong>LSGE</strong>
-          <small>Portal de Lingüística</small>
-        </div>
+  <nav class="nav" id="nav" aria-label="Principal">
+    <div class="nav__container">
+      <a href="../" class="nav__logo" aria-label="Asociación LSGE — inicio">
+        <img src="../img/logo-oficial.svg" alt="" class="nav__logo-img" onerror="this.src='../img/logo-oficial.png'">
+        <span>LSGE</span>
       </a>
-      <nav class="site-nav" aria-label="Navegación principal">
-        <a href="../">Inicio</a>
-        <a href="../diccionario/">Diccionario</a>
-        <a href="#" class="active" aria-current="page">Gramática</a>
-        <a href="../blog/">Blog</a>
+      <div class="nav__links" id="navLinks">
+        <a href="../#mision">Misión</a>
+        <a href="../#lsge">La Lengua</a>
         <a href="../#comunidad">Comunidad</a>
+        <a href="../#servicios">Servicios</a>
+        <a href="../#impacto">Impacto</a>
+        <a href="../blog/">Blog</a>
         <a href="../#contacto">Contacto</a>
-      </nav>
-      <button class="search-trigger" onclick="document.querySelector('.search-overlay').classList.toggle('open')" aria-label="Buscar en la gramática"><span class="material-symbols-outlined" aria-hidden="true">search</span></button>
+      </div>
+      <button class="nav__toggle" id="navToggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+  </nav>
+
 
   <!-- SEARCH OVERLAY -->
   <div class="search-overlay">
@@ -484,38 +488,42 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
-      <div class="site-footer__grid">
-        <div>
-          <h4>Portal de Lingüística LSGE</h4>
-          <p style="font-size:.88rem;color:var(--footer-muted);line-height:1.7">Gramática de referencia de la Lengua de Signos de Guinea Ecuatorial. Proyecto de documentación lingüística de la comunidad sorda ecuatoguineana.</p>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="footer__logo"><img src="../img/logo-oficial.svg" alt="" style="height:22px;vertical-align:middle;margin-right:6px" onerror="this.src='../img/logo-oficial.png'"> LSGE</span>
+          <p>Asociación sin ánimo de lucro. Apolítica. Constituida en Malabo, Guinea Ecuatorial. Al amparo de la Ley Nº 1/1999 de Régimen de ONG.</p>
         </div>
-        <div>
-          <h4>Áreas</h4>
-          <a href="#area1">Contexto Sociohistórico</a>
-          <a href="#area2">Fonología</a>
-          <a href="#area3">Léxico</a>
-          <a href="#area4">Morfología</a>
+        <div class="footer__links">
+          <h4>Enlaces</h4>
+          <a href="../#mision">Misión</a>
+          <a href="../#lsge">La Lengua</a>
+          <a href="../#comunidad">Comunidad</a>
+          <a href="../#contacto">Contacto</a>
         </div>
-        <div style="margin-top:24px">
-          <a href="#area5">Sintaxis</a>
-          <a href="#area6">Semántica</a>
-          <a href="#area7">Pragmática</a>
+        <div class="footer__links">
+          <h4>Recursos</h4>
+          <a href="../linguistica/">Gramática LSGE</a>
           <a href="../diccionario/">Diccionario Visual</a>
           <a href="../blog/">Blog</a>
+          <a href="../accesibilidad/">Accesibilidad</a>
         </div>
-        <div>
-          <h4>Contacto</h4>
-          <p style="font-size:.85rem;color:var(--footer-muted)">Asociación LSGE<br>Malabo, Guinea Ecuatorial<br><a href="mailto:lsge.eg@gmail.com" style="color:var(--footer-muted);text-decoration:underline">lsge.eg@gmail.com</a></p>
+        <div class="footer__links">
+          <h4>Internacional</h4>
+          <a href="https://wfdeaf.org" target="_blank" rel="noopener">WFD</a>
+          <a href="https://wfdb.eu" target="_blank" rel="noopener">WFDB</a>
+          <a href="https://wasli.org" target="_blank" rel="noopener">WASLI</a>
+          <a href="https://www.un.org/development/desa/disabilities/" target="_blank" rel="noopener">ONU</a>
         </div>
       </div>
-      <div style="border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
-        <p style="font-size:.78rem;color:var(--footer-muted)">&copy; 2026 Asociación LSGE. Portal de Lingüística.</p>
-        <div style="display:flex;gap:16px"><a href="../accesibilidad/" style="font-size:.78rem;color:var(--footer-muted)">Accesibilidad</a><a href="../#contacto" style="font-size:.78rem;color:var(--footer-muted)">Contacto</a><a href="../" style="font-size:.78rem;color:var(--footer-muted)">Inicio</a></div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Asociación LSGE — Lengua de Signos de Guinea Ecuatorial.</p>
+        <p>Hecho con dedicación por la comunidad sorda de Guinea Ecuatorial.</p>
       </div>
     </div>
   </footer>
+
 
   <script src="../js/a11y-menu.js"></script>
   <script>
@@ -523,5 +531,6 @@
     document.querySelectorAll('.sidebar__link').forEach(function(l){l.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));t&&t.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.sidebar__link').forEach(function(x){x.classList.remove('active')});this.classList.add('active')})});
   </script>
   <script src="../js/lsge-media.js"></script>
+  <script src="../js/nav-shared.js"></script>
 </body>
 </html>
