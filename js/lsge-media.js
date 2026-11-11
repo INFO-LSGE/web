@@ -102,18 +102,35 @@
       video.pause();
       video.removeAttribute('src');
       video.load();
+      delete video.dataset.fallback;
 
       var src = BASE + 'videos/signos/menu-' + slug(gloss) + '.mp4';
+
       video.onloadeddata = function () {
         video.style.display = 'block';
         hand.style.display = 'none';
-        hint.textContent = 'Vídeo del signo';
+        if (video.dataset.fallback === '1') {
+          hint.textContent = 'Muestra del diccionario · signo de «' + gloss + '» pendiente';
+        } else {
+          hint.textContent = 'Vídeo del signo';
+        }
         video.play().catch(function () {});
       };
+
       video.onerror = function () {
+        /* Si el signo concreto del menú aún no existe, se muestra un clip de
+           muestra del diccionario, claramente etiquetado como muestra. */
+        if (video.dataset.fallback !== '1') {
+          video.dataset.fallback = '1';
+          video.src = BASE + 'videos/lsge/demo-bien.mp4';
+          video.load();
+          return;
+        }
         video.style.display = 'none';
         hand.style.display = '';
+        hint.textContent = 'Vídeo del signo próximamente';
       };
+
       video.src = src;
       video.load();
     }
