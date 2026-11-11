@@ -187,7 +187,7 @@
     Array.prototype.slice.call(main.querySelectorAll('p')).forEach(function (p) {
       var text = (p.textContent || '').replace(/\s+/g, ' ').trim();
       if (text.length < 90) return;
-      if (p.closest(SKIP)) return;
+      if (p.closest(SKIP) || p.closest('.lsge-row')) return;
       if (p.nextElementSibling && p.nextElementSibling.classList.contains('lsge-media')) return;
 
       var section = p.closest('section[id]');
@@ -195,79 +195,45 @@
       counters[sid] = (counters[sid] || 0) + 1;
       total += 1;
 
-      var id = 'lsge-panel-' + total;
       var custom = p.getAttribute('data-lsge-video');
       var file = custom || ('videos/lsge/' + page + '-' + sid + '-' + counters[sid] + '.mp4');
-      var label = p.getAttribute('data-lsge-label') || 'Ver este párrafo en LSGE';
-      var caption = p.getAttribute('data-lsge-caption') || 'Traducción de este párrafo a la Lengua de Signos de Guinea Ecuatorial.';
       var poster = p.getAttribute('data-lsge-poster') || 'img/lsge-demo-bien.jpg';
-      var centered = !!p.closest('.section-header');
+      var forceSample = p.hasAttribute('data-lsge-sample');
 
-      var fig = document.createElement('figure');
-      fig.className = 'lsge-media' + (centered ? ' lsge-media--center' : '');
-      fig.setAttribute('data-video', file);
-      fig.innerHTML =
-        '<button class="lsge-media__btn" type="button" aria-expanded="false" aria-controls="' + id + '">' +
-          '<span class="lsge-media__hand" aria-hidden="true">🤟</span>' +
-          '<span>' + label + '</span>' +
-          '<span class="lsge-media__chev" aria-hidden="true">▾</span>' +
-        '</button>' +
-        '<div class="lsge-media__body" id="' + id + '" hidden>' +
-          '<div class="lsge-media__slot">' +
-            '<video controls playsinline preload="none"' + (poster ? ' poster="' + BASE + poster + '"' : '') + '></video>' +
-            '<div class="lsge-media__ph">' +
-              '<span class="lsge-media__hand" aria-hidden="true">🤟</span>' +
-              '<p>Vídeo en LSGE pendiente de grabar.</p>' +
-              '<small>Se publicará en <code>' + file + '</code></small>' +
-            '</div>' +
-          '</div>' +
-          '<small class="lsge-media__prov" hidden>Vídeo provisional de muestra (signo BIEN). Se sustituirá por la traducción de este párrafo.</small>' +
-          '<figcaption class="lsge-media__caption">' + caption + '</figcaption>' +
-        '</div>';
+      var row = document.createElement('div');
+      row.className = 'lsge-row';
+      row.setAttribute('data-video', file);
+      row.innerHTML =
+        '<figure class="lsge-row__media">' +
+          '<video controls playsinline preload="none" poster="' + BASE + poster + '" aria-label="Vídeo en Lengua de Signos de Guinea Ecuatorial"></video>' +
+          '<span class="lsge-row__tag" aria-hidden="true">LSGE</span>' +
+          '<span class="lsge-row__badge" hidden>Muestra</span>' +
+        '</figure>' +
+        '<div class="lsge-row__text"></div>';
 
-      p.insertAdjacentElement('afterend', fig);
+      p.parentNode.insertBefore(row, p);
+      row.querySelector('.lsge-row__text').appendChild(p);
 
-      var btn = fig.querySelector('.lsge-media__btn');
-      var body = fig.querySelector('.lsge-media__body');
-      var video = fig.querySelector('video');
-      var ph = fig.querySelector('.lsge-media__ph');
-      var prov = fig.querySelector('.lsge-media__prov');
+      var video = row.querySelector('video');
+      var badge = row.querySelector('.lsge-row__badge');
+      video.src = BASE + file;
 
-      /* Todos los paneles arrancan con el póster visible */
-      video.style.display = 'block';
-      ph.style.display = 'none';
+      /* ¿Existe ya el vídeo de este párrafo? Si no, se usa el clip provisional. */
+      fetch(BASE + file, { method: 'HEAD' }).then(function (r) {
+        if (r.ok && !forceSample) return;
+        video.src = BASE + 'videos/lsge/demo-bien.mp4';
+        badge.hidden = false;
+      }).catch(function () {
+        video.src = BASE + 'videos/lsge/demo-bien.mp4';
+        badge.hidden = false;
+      });
 
-      btn.addEventListener('click', function () {
-        var open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        body.hidden = open;
-        if (open) {
-          video.pause();
-          return;
-        }
-        if (!video.dataset.loaded) {
-          video.dataset.loaded = '1';
-          video.onloadeddata = function () {
-            video.style.display = 'block';
-            ph.style.display = 'none';
-            if (prov) prov.hidden = (video.dataset.demo !== '1');
-            video.play().catch(function () {});
-          };
-          video.onerror = function () {
-            /* Si aún no existe el vídeo de este párrafo, se usa el clip
-               provisional del diccionario y se indica que es una muestra. */
-            if (video.dataset.demo !== '1') {
-              video.dataset.demo = '1';
-              video.src = BASE + 'videos/lsge/demo-bien.mp4';
-              video.load();
-              return;
-            }
-            video.style.display = 'none';
-            ph.style.display = '';
-          };
-          video.src = BASE + file;
-          video.load();
-        }
+      video.addEventListener('error', function () {
+        if (video.dataset.demo === '1') return;
+        video.dataset.demo = '1';
+        video.src = BASE + 'videos/lsge/demo-bien.mp4';
+        badge.hidden = false;
+        video.load();
       });
     });
   }
