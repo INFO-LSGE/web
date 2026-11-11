@@ -305,7 +305,7 @@ html.a11y-guide .a11y-reading-guide{display:block}
 .portal--dic .portal__link{border-bottom-color:rgba(15,30,58,.25)}
 .portal:hover .portal__link{border-bottom-color:rgba(255,255,255,.8)}
 .portal--dic:hover .portal__link{border-bottom-color:rgba(15,30,58,.6)}
-@media(max-width:768px){.portales__grid{grid-template-columns:1fr}.portal__inner{flex-direction:column;align-items:center;text-align:center}}
+@media(max-width:767px){.portales__grid{grid-template-columns:1fr}.portal__inner{flex-direction:column;align-items:center;text-align:center}}
 .mission{padding:120px 0;background:var(--bg);transition:background .3s}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{padding:40px 32px;border-radius:16px;transition:all .3s;border:1px solid transparent}
@@ -402,7 +402,7 @@ html.a11y-guide .a11y-reading-guide{display:block}
   .impacto__grid{grid-template-columns:1fr 1fr}
 }
 /* === TABLET (769–1024): el punto que se veía regular === */
-@media (min-width:769px) and (max-width:1024px){
+@media (min-width:768px) and (max-width:1024px){
   /* Hero: no ocupa toda la pantalla en vertical */
   .hero{min-height:0;padding:132px 0 88px}
   .hero__title{font-size:clamp(2.4rem,4.6vw,3.4rem)}
@@ -442,11 +442,11 @@ html.a11y-guide .a11y-reading-guide{display:block}
   .footer__grid{gap:32px}
 }
 
-@media (min-width:769px) and (max-width:900px){
+@media (min-width:768px) and (max-width:900px){
   .portales__grid{grid-template-columns:1fr;gap:16px}
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
   .nav__links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:40px;z-index:999}
   .nav__links.active{display:flex}
   .nav__links a{font-size:1.2rem}
