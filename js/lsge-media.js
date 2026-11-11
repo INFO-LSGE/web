@@ -200,7 +200,7 @@
       var file = custom || ('videos/lsge/' + page + '-' + sid + '-' + counters[sid] + '.mp4');
       var label = p.getAttribute('data-lsge-label') || 'Ver este párrafo en LSGE';
       var caption = p.getAttribute('data-lsge-caption') || 'Traducción de este párrafo a la Lengua de Signos de Guinea Ecuatorial.';
-      var poster = p.getAttribute('data-lsge-poster') || '';
+      var poster = p.getAttribute('data-lsge-poster') || 'img/lsge-demo-bien.jpg';
       var centered = !!p.closest('.section-header');
 
       var fig = document.createElement('figure');
@@ -221,6 +221,7 @@
               '<small>Se publicará en <code>' + file + '</code></small>' +
             '</div>' +
           '</div>' +
+          '<small class="lsge-media__prov" hidden>Vídeo provisional de muestra (signo BIEN). Se sustituirá por la traducción de este párrafo.</small>' +
           '<figcaption class="lsge-media__caption">' + caption + '</figcaption>' +
         '</div>';
 
@@ -230,12 +231,11 @@
       var body = fig.querySelector('.lsge-media__body');
       var video = fig.querySelector('video');
       var ph = fig.querySelector('.lsge-media__ph');
+      var prov = fig.querySelector('.lsge-media__prov');
 
-      /* Si el párrafo ya tiene vídeo, se muestra el póster desde el principio */
-      if (custom) {
-        video.style.display = 'block';
-        ph.style.display = 'none';
-      }
+      /* Todos los paneles arrancan con el póster visible */
+      video.style.display = 'block';
+      ph.style.display = 'none';
 
       btn.addEventListener('click', function () {
         var open = btn.getAttribute('aria-expanded') === 'true';
@@ -250,9 +250,18 @@
           video.onloadeddata = function () {
             video.style.display = 'block';
             ph.style.display = 'none';
+            if (prov) prov.hidden = (video.dataset.demo !== '1');
             video.play().catch(function () {});
           };
           video.onerror = function () {
+            /* Si aún no existe el vídeo de este párrafo, se usa el clip
+               provisional del diccionario y se indica que es una muestra. */
+            if (video.dataset.demo !== '1') {
+              video.dataset.demo = '1';
+              video.src = BASE + 'videos/lsge/demo-bien.mp4';
+              video.load();
+              return;
+            }
             video.style.display = 'none';
             ph.style.display = '';
           };

@@ -60,3 +60,6 @@
 @media (hover:none){
   .sign-tip{display:none}
 }
+
+.lsge-media__prov{display:block;font-size:.7rem;color:var(--text-muted);margin-top:8px;line-height:1.5}
+.lsge-media__prov[hidden]{display:none}
